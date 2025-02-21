@@ -139,6 +139,19 @@ body {
     fill: var(--quellaveco-rojo);
 }
 
+#sidebar.close #logout-seccion {
+    display: grid;
+    place-content: center;
+    height: 50px;
+    background-color: #2785C7;
+}
+
+#sidebar.close #logout-seccion svg {
+    height: 40px;
+}
+
+
+
 #sidebar.close #logout-seccion #numero-unidad,
 #sidebar.close #logout-seccion #descripcion-unidad {
     display: none;
