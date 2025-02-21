@@ -461,7 +461,7 @@ main {
 
 /* Modo oscuro */
 .dark-mode {
-    background-color: #eab618;
+    background-color: var(--quellaveco-azul);
 }
 
 /* Responsividad */
