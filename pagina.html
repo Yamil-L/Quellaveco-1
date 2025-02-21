@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Roscados</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .container {
+            background-color: #c4c4c4;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+            padding: 20px;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-box"></div>
+        <div class="right-box"></div>
+        <div class="title">Características, tipos y designación de los elementos roscados</div>
+
+        <div class="content">
+            <div class="image-container">
+                <img src="images/v2_185.png" alt="Tornillos y tuercas">
+                <img src="images/v2_187.png" alt="Diagrama de tornillo">
+            </div>
+        </div>
+
+        <div class="text">
+            <ul>
+                <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
+                <li>Tornillos, espárragos, varillas roscadas, etc.</li>
+                <li>Tuercas y arandelas.</li>
+                <li>Elementos de seguridad.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Botón de cambio de tema -->
+    <button class="toggle-theme" onclick="toggleTheme()">🌙 Modo Oscuro</button>
+
+    <script>
+        // Función para cambiar entre modo claro y oscuro
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            let button = document.querySelector('.toggle-theme');
+            if (document.body.classList.contains('dark-mode')) {
+                button.textContent = "☀️ Modo Claro";
+            } else {
+                button.textContent = "🌙 Modo Oscuro";
+            }
+        }
+    </script>
+</body>
+</html>
