@@ -104,18 +104,39 @@ body {
 
 #sidebar.close #logo-seccion:hover {
     cursor: pointer;
-
+    
     svg {
-        fill: var(--quellaveco-gris);
+        fill: var(--quellaveco-rojo);
     }
 }
 
-#sidebar.close #search-btn:hover {
+#sidebar.close #search-btn {
+    justify-content: center;
     cursor: pointer;
 
     input {
         display: none;
     }
+}
+
+#sidebar.close #search-btn:hover svg{
+    fill: var(--quellaveco-rojo);
+}
+
+#sidebar.close .dropdown-btn {
+    justify-content: center;
+
+    span {
+        display: none;
+    }
+
+    svg {
+        fill: var(--color-blanco)
+    }
+}
+
+#sidebar.close .dropdown-btn:hover svg{
+    fill: var(--quellaveco-rojo);
 }
 
 #sidebar.close #logout-seccion #numero-unidad,
