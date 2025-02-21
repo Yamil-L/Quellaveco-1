@@ -99,6 +99,13 @@ body {
     color: var(--quellaveco-azul);
 }
 
+#menu h3 {
+    background-color: var(--quellaveco-azul);
+    padding: 0.5em;
+    border-radius: 30%;
+    color: var(--color-blanco);
+}
+
 /* MENU CLOSE*/
 #sidebar.close {
     width: 60px;
