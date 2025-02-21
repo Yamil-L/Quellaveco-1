@@ -84,6 +84,10 @@ body {
     a {
         color: var(--color-blanco);
     }
+
+    svg {
+        fill: var(--color-blanco);
+    }
 }
 
 #menu ul {
@@ -111,12 +115,9 @@ body {
     }
 }
 
-#sidebar.close #logo-seccion:hover {
+#sidebar.close #logo-seccion svg:hover {
     cursor: pointer;
-    
-    svg {
-        fill: var(--quellaveco-rojo);
-    }
+    fill: var(--quellaveco-rojo);
 }
 
 #sidebar.close #search-btn {
