@@ -111,51 +111,35 @@
         </nav>
 
         <main>
-            <div class="left-box"></div>
-            <div class="right-box"></div>
-            <div class="title">Características, tipos y designación de los elementos roscados</div>
+            <div id="title">
+                <div class="left-box"></div>
+                <div class="right-box"></div>
+                <h2>Características, tipos y designación de los elementos roscados</h2>
+            </div>
 
             <div class="content">
-                <div class="image-container">
-                    <img src="images/v2_185.png" alt="Tornillos y tuercas" onclick="openImage(this)">
-                    <img src="images/v2_187.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                <div class="img-container">
+                    <img src="images/v2_185.png" alt="Tornillos y tuercas">
+                </div>
+                <div class="img-container">
+                    <img src="images/v2_187.png" alt="Diagrama de tornillo">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
+                        <li>Tornillos, espárragos, varillas roscadas, etc.</li>
+                        <li>Tuercas y arandelas.</li>
+                        <li>Elementos de seguridad.</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="text">
-                <ul>
-                    <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
-                    <li>Tornillos, espárragos, varillas roscadas, etc.</li>
-                    <li>Tuercas y arandelas.</li>
-                    <li>Elementos de seguridad.</li>
-                </ul>
-            </div>
-
-
-            <!-- Modal con imagen agrandada -->
-    <div class="overlay" onclick="closeImage()">
-        <span class="close-btn">&times;</span>
-        <img src="" alt="Imagen ampliada">
-    </div>
-
-    <!-- Botón de cambio de tema -->
-    <button class="toggle-theme" onclick="toggleTheme()">🌙 Modo Oscuro</button>
         </main>
     </div>
 
     <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-        function openImage(img) {
-            document.querySelector(".overlay img").src = img.src;
-            document.querySelector(".overlay").style.display = "flex";
-        }
-
-        function closeImage() {
-            document.querySelector(".overlay").style.display = "none";
-        }
+        document.getElementById('showContentBtn').addEventListener('click', function () {
+            window.location.href = '/pages/descripcion2.html'
+        });
     </script>
 </body>
 
