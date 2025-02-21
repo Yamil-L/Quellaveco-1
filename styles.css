@@ -460,6 +460,9 @@ main {
 /* Modo oscuro */
 .dark-mode {
     background-color: var(--quellaveco-azul);
+    --quellaveco-azul: #FFF;
+    --color-blanco: #2A3289;
+    --quellaveco-gris: #2A3289;
 }
 
 /* Responsividad */
