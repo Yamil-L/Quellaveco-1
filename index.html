@@ -117,8 +117,8 @@
 
             <div class="content">
                 <div class="image-container">
-                    <img src="images/v2_185.png" alt="Tornillos y tuercas">
-                    <img src="images/v2_187.png" alt="Diagrama de tornillo">
+                    <img src="images/v2_185.png" alt="Tornillos y tuercas" onclick="openImage(this)">
+                    <img src="images/v2_187.png" alt="Diagrama de tornillo" onclick="openImage(this)">
                 </div>
             </div>
 
@@ -130,13 +130,32 @@
                     <li>Elementos de seguridad.</li>
                 </ul>
             </div>
+
+
+            <!-- Modal con imagen agrandada -->
+    <div class="overlay" onclick="closeImage()">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- Botón de cambio de tema -->
+    <button class="toggle-theme" onclick="toggleTheme()">🌙 Modo Oscuro</button>
         </main>
     </div>
 
     <script>
-        document.getElementById('showContentBtn').addEventListener('click', function () {
-            window.location.href = '/pages/descripcion2.html'
-        });
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function openImage(img) {
+            document.querySelector(".overlay img").src = img.src;
+            document.querySelector(".overlay").style.display = "flex";
+        }
+
+        function closeImage() {
+            document.querySelector(".overlay").style.display = "none";
+        }
     </script>
 </body>
 
