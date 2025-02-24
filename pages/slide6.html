@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/slide4/styles.css">
+    <link rel="stylesheet" href="../assets/slide6/styles.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -137,8 +137,19 @@
             </div>
 
             <div class="content">
-                 <div class="text">
-                    <p>Características, tipos y designación de los elementos roscados</p>
+                <div class="text-container" id="extra-text">
+                    <!-- Aquí aparecerá el texto cuando hagas clic en una imagen -->
+                </div>
+                <div class="images">
+                    <div class="img-container">
+                        <img src="../assets/slide6/image1.png" alt="Tornillos y tuercas" onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
+                    </div>
+                    <div class="img-container">
+                        <img src="../assets/slide6/image2.png" alt="Diagrama de tornillo" onclick="toggleEffect(this, 'Texto sobre el diagrama del tornillo')">
+                    </div>
+                    <div class="img-container">
+                        <img src="../assets/slide6/image3.png" alt="Diagrama de tornillo" onclick="toggleEffect(this, 'Más información sobre el diagrama')">
+                    </div>
                 </div>
             </div>
 
@@ -154,6 +165,35 @@
     </div>
 
     <script>
+        function toggleEffect(clickedImage, text) {
+        let allImages = document.querySelectorAll('.img-container img');
+        let textContainer = document.getElementById('extra-text');
+
+        // Si la imagen ya está activa, restaurar la vista original
+        if (clickedImage.classList.contains('active')) {
+            allImages.forEach(img => {
+                img.classList.remove('blurred', 'shifted', 'highlighted');
+            });
+
+            textContainer.textContent = "";
+            textContainer.classList.remove('show-text');
+            clickedImage.classList.remove('active');
+        } else {
+            // Aplicar efecto a todas las imágenes excepto la seleccionada
+            allImages.forEach(img => {
+                img.classList.add('blurred', 'shifted');
+                img.classList.remove('highlighted');
+            });
+
+            // Remover efecto de difuminado en la imagen seleccionada
+            clickedImage.classList.remove('blurred');
+            clickedImage.classList.add('active', 'highlighted');
+
+            // Mostrar el texto a la izquierda
+            textContainer.textContent = text;
+            textContainer.classList.add('show-text');
+        }
+    }
          function toggleExtraImage() {
         let extraImage = document.querySelector('.extra-image');
         extraImage.classList.toggle('show'); // Alterna la clase .show
@@ -200,7 +240,7 @@
 
 
         function nextPage() {
-        window.location.href = "slide6.html"; // Reemplaza con la URL de tu página siguiente
+        window.location.href = "slide5.html"; // Reemplaza con la URL de tu página siguiente
     }
     </script>
 </body>
