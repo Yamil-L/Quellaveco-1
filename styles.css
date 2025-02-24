@@ -377,10 +377,14 @@ main {
 
 #title h2 {
     margin-top: 50px;
-    margin-left: 125px;
     font-size: 2.5vw;
-    color: var(--quellaveco-azul);
-
+    align-items: center;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
     margin-bottom: 20px;
     animation: slideIn 1s ease-in-out forwards;
 }
