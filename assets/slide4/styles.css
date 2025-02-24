@@ -375,14 +375,16 @@ main {
 }
 
 .img-container img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     height: auto;
     width: auto;
     object-fit: contain;
     border: 2px solid var(--quellaveco-azul);
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 500px;
+    margin-left: 20px;
 }
 
 /* Efecto al pasar el mouse sobre las imágenes */
@@ -507,7 +509,6 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: zoomIn 0.3s ease-in-out;
-    width: 600px;
 }
 
 /* Botón de cierre */
@@ -584,4 +585,23 @@ main {
     }
 
 
-    
+    .content {
+        display: flex; /* Mantiene las imágenes en la misma fila */
+        gap: 20px;
+        position: relative;
+    }
+
+    /* Imagen extra oculta al inicio */
+    .extra-image {
+        display: none;
+        opacity: 0;
+        transform: translateX(50px); /* Empieza más a la derecha */
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    /* Cuando se muestra, aparece en la fila */
+    .extra-image.show {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
