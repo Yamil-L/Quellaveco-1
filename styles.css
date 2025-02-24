@@ -1,6 +1,8 @@
 /* Reset y variables */
 :root {
-    --quellaveco-azul: #2A3289;
+    --quellaveco-azul: #031795;
+    --quellaveco-azul-oscuro: #1D107A;
+    --quellaveco-azul-claro: #351EED;
     --quellaveco-celeste: #2785C7;
     --quellaveco-gris: #D9D9D9;
     --quellaveco-rojo: #FF0000;
@@ -32,7 +34,8 @@ body {
     height: 100vh;
     width: 300px;
 
-    background-color: var(--quellaveco-gris);
+    /* background: linear-gradient(25deg, var(--quellaveco-azul-claro) , var(--quellaveco-azul-oscuro) 60%); */
+    background-color: (var(--color-blanco));
     font-weight: bold;
 
     position: sticky;
