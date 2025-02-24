@@ -1,55 +1,14 @@
 /* Reset y variables */
 :root {
-    --quellaveco-azul: #031795;
-    --quellaveco-azul-oscuro: #1D107A;
-    --quellaveco-azul-claro: #351EED;
+    --quellaveco-azul: #2A3289;
     --quellaveco-celeste: #2785C7;
     --quellaveco-gris: #D9D9D9;
     --quellaveco-rojo: #FF0000;
     --color-blanco: #FFF;
 }
 
-/* Fuente */
-
-@font-face {
-    font-family: "Aa Smart Sans";
-    src: url("fonts/AASmartSans-Bold.woff") format("woff"),
-         url("fonts/AASmartSans-Bold.woff2") format("woff2");
-
-    font-weight: bolder;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Aa Smart Sans";
-    src: url("fonts/AASmartSans-SemiBold.woff") format("woff"),
-         url("fonts/AASmartSans-SemiBold.woff2") format("woff2");
-
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Aa Smart Sans";
-    src: url("fonts/AASmartSans-Regular.woff") format("woff"),
-         url("fonts/AASmartSans-Regular.woff2") format("woff2");
-
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: "Aa Smart Sans";
-    src: url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff") format("woff"),
-         url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff2") format("woff2");
-
-    font-weight: lighter;
-    font-style: normal;
-}
-
 * {
-    font-family: "Aa Smart Sans", sans-serif;
+    font-family: 'HelveticaNeue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,6 +16,7 @@
 
 body {
     font-weight: normal;
+    letter-spacing: 1px;
     background-color: #FFF;
     min-height: 100dvh;
 }
@@ -72,7 +32,7 @@ body {
     height: 100vh;
     width: 300px;
 
-    background: linear-gradient(25deg, var(--quellaveco-azul-claro) , var(--quellaveco-azul-oscuro) 60%);
+    background-color: var(--quellaveco-gris);
     font-weight: bold;
 
     position: sticky;
@@ -84,8 +44,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
-
-    color: var(--color-blanco);
 }
 
 /* MENU */
@@ -109,17 +67,26 @@ body {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 
-    color: var(--color-blanco);
+    color: var(--quellaveco-azul);
     font-size: 16px;
+    font-weight: bold;
 
     svg {
-        fill: var(--color-blanco);
+        fill: var(--quellaveco-azul);
     }
 }
 
 #menu button:hover {
     background-color: var(--quellaveco-azul);
     color: var(--color-blanco);
+    
+    a {
+        color: var(--color-blanco);
+    }
+
+    svg {
+        fill: var(--color-blanco);
+    }
 }
 
 #menu ul {
@@ -346,7 +313,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, rgba(39, 133, 199, 0.2) 10%, var(--color-blanco) 90%);
+    background: linear-gradient(to top, rgba(39, 133, 199, 0.2) 10%, var(--color-blanco) 90%);
 }
 
 /* TITLE */
@@ -408,14 +375,16 @@ main {
 }
 
 .img-container img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     height: auto;
     width: auto;
     object-fit: contain;
     border: 2px solid var(--quellaveco-azul);
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 500px;
+    margin-left: 20px;
 }
 
 /* Efecto al pasar el mouse sobre las imágenes */
@@ -540,7 +509,6 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: zoomIn 0.3s ease-in-out;
-    width: 600px;
 }
 
 /* Botón de cierre */
@@ -617,4 +585,23 @@ main {
     }
 
 
-    
+    .content {
+        display: flex; /* Mantiene las imágenes en la misma fila */
+        gap: 20px;
+        position: relative;
+    }
+
+    /* Imagen extra oculta al inicio */
+    .extra-image {
+        display: none;
+        opacity: 0;
+        transform: translateX(50px); /* Empieza más a la derecha */
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    /* Cuando se muestra, aparece en la fila */
+    .extra-image.show {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
