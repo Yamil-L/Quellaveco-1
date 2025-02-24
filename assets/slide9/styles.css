@@ -583,35 +583,3 @@ main {
     .next-page-btn:hover i {
         transform: translateX(5px); /* Mueve la flecha ligeramente a la derecha */
     }
-
-
-    .content {
-        display: flex; /* Coloca el texto y la imagen en la misma línea */
-        align-items: center; /* Alinea verticalmente al centro */
-        gap: 20px; /* Espacio entre texto e imagen */
-        justify-content: space-between; /* Distribuye espacio */
-        width: 100%;
-    }
-
-    .text {
-        width: 50%; /* El texto ocupa el 60% del espacio */
-        font-size: 15px;
-        color: #001f87;
-    }
-
-    .img-container img {
-        max-width: 90%;
-    max-height: 90%;
-    height: auto;
-    width: auto;
-    object-fit: contain;
-    border: 2px solid var(--quellaveco-azul);
-    border-radius: 0.5em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-height: 500px;
-    margin-left: 20px;
-    }
-
-    .img-container img:hover {
-        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
-    }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/slide10/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -15,7 +15,7 @@
         <nav id="sidebar">
             <div id="logo-seccion">
                 <a href="index.html">
-                    <img src="../logo.png" height="15px" alt="logo">
+                    <img src="../logo2.png" height="15px" alt="logo">
                 </a>
                 <button onclick="toggleSidebar()" id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -79,30 +79,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                                    <h3>M2</h3>
-                                    <a href="#">Módulo 2</a>
-                                </button>
-                            </li>
-                            <li>
-                                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                                    <h3>M3</h3>
-                                    <a href="#">Módulo 3</a>
-                                </button>
-                            </li>
-                            <li>
-                                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                                    <h3>M4</h3>
-                                    <a href="#">Módulo 4</a>
-                                </button>
-                            </li>
-                            <li>
-                                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                                    <h3>M5</h3>
-                                    <a href="#">Módulo 5</a>
-                                </button>
-                            </li>
                         </div>
                     </ul>
                 </li>
@@ -136,33 +112,19 @@
             </div>
 
             <div class="content">
-                
-                <div class="text">
-                    <ol type="a"> <!-- Lista ordenada con letras -->
-                        <li>Tornillo autoperforante con cabeza «gota de sebo».</li>
-                        <li>Tornillo autoperforante con cabeza avellanada.</li>
-                        <li>Tornillo autoperforante con cabeza avellanada «gota de sebo».</li>
-                        <li>Tornillo autoperforante con arandela incorporada.</li>
-                        <li>Tornillo de aletas con estrías fresadoras.</li>
-                        <li>Tornillo de aletas sin estrías fresadoras.</li>
-                        <li>Tornillo cabeza avellanadora con aletas de estrías fresadoras.</li>
-                        <li>Tornillo cabeza avellanadora «gota de sebo» con aletas de estrías fresadoras.</li>
-                        <li>Tornillo para chapa con cabeza hexagonal y arandela imperdible</li>
-                        <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
-                        <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
-                        <li>Tornillo para chapa de cabeza cilíndrica y ranura Phillips.</li>
-                        <li>Tornillo para chapa de cabeza «gota de sebo», ranura Phillips y ovalillo.</li>
-                        <li>Tornillo métrico cilíndrico.</li>
-                        <li>Tornillo métrico de cabeza plana con ranura.</li>
-                        <li>Tornillo métrico Allen de cabeza cilíndrica.</li>
-                        <li>Tornillo métrico hexagonal con cabeza roscada</li>
-                        <li>Tornillo métrico hexagonal con vástago.</li>
-                        <li>Tornillo métrico avellanado con ranura.</li>
-                        <li>Tornillo métrico «gota de sebo» con ranura.</li>
-                    </ol>
+                <div class="img-container">
+                    <img src="../images/v2_185.png" alt="Tornillos y tuercas" onclick="openImage(this)">
                 </div>
                 <div class="img-container">
-                    <img src="../assets/slide10/image40.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                    <img src="../images/v2_187.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
+                        <li>Tornillos, espárragos, varillas roscadas, etc.</li>
+                        <li>Tuercas y arandelas.</li>
+                        <li>Elementos de seguridad.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -220,7 +182,7 @@
 
 
         function nextPage() {
-        window.location.href = "slide11.html"; // Reemplaza con la URL de tu página siguiente
+        window.location.href = "slide9.html"; // Reemplaza con la URL de tu página siguiente
     }
     </script>
 </body>
