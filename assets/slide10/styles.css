@@ -623,10 +623,39 @@ main {
 }
 
 .text {
-    margin-left: 40PX;
+    margin-left: 40px;
     width: 50%; /* El texto ocupa el 60% del espacio */
     font-size: 15px;
+}
+/* Estilo para la lista ordenada */
+.custom-list {
+    list-style: none; /* Oculta los estilos predeterminados */
+    padding-left: 0;
+}
+
+/* Aplica estilos a cada elemento de la lista */
+.custom-list li {
+    position: relative;
+    padding-left: 40px; /* Espacio para el círculo */
     color: #001f87;
+}
+
+/* Crea el círculo alrededor de la letra */
+.custom-list li::before {
+    content: counter(list-item, lower-alpha); /* Usa letras en lugar de números */
+    
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #001f87; /* Azul para la letra */
+    background-color: white; /* Fondo blanco */
+    border: 2px solid #001f87; /* Borde azul */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    display: inline-block;
 }
 
 .img-container img {
