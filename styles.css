@@ -146,6 +146,18 @@ body {
     padding-left: 2.5em;
 }
 
+#menu {
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}
+
 /* MENU CLOSE*/
 #sidebar.close {
     width: 60px;

@@ -1,0 +1,24 @@
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+    background-color: var(--quellaveco-azul-claro);
+}
+
+.content h2 {
+    color: var(--quellaveco-azul);
+    margin-top: 50px;
+    font-size: 4vw;
+    font-weight: normal;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--quellaveco-azul);
+    background-color: #FFF;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 5em;
+
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out forwards;
+}
