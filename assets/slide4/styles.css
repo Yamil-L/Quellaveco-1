@@ -31,3 +31,10 @@
     opacity: 1;
     transform: translateX(0);
 }
+
+.extra-image.show p{
+    color: #001f87; /* Azul */
+    font-size: 15px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
