@@ -4,8 +4,8 @@ main {
     align-items: center;
 }
 .pulse {
-    height: 250px;
-    width: 250px;
+    height: 450px;
+    width: 450px;
     background: #0317951F;
     position: absolute;
     margin: auto;
