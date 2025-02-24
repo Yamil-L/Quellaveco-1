@@ -383,6 +383,8 @@ main {
     border: 2px solid var(--quellaveco-azul);
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 500px;
+    margin-left: 20px;
 }
 
 /* Efecto al pasar el mouse sobre las imágenes */
