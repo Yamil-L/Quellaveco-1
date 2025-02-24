@@ -409,6 +409,8 @@ main {
 }
 
 .img-container img {
+    max-width: 90%;
+    max-height: 90%;
     padding: 0.4em;
     display: inline-flex; /* Hace que solo ocupe el tamaño del contenido */
     justify-content: center;
