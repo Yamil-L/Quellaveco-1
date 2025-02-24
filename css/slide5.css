@@ -22,13 +22,3 @@
 
 /* SLIDE 2 */
 
-p {
-  position: absolute;
-  z-index: 10;
-  bottom: 30px;
-  right: 50px;
-
-  font-weight: bolder;
-  font-size: 1.2em;
-  color: var(--quellaveco-azul);
-}
