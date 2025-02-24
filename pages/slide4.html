@@ -91,7 +91,8 @@
                                     </li>
                                     <li>
                                         <button onclick=toggleSubMenu(this) class="link">
-                                            <a href="slide9.html">1.3 DesigElementos roscados - Característicasnación</a>
+                                            <a href="slide9.html">1.3 DesigElementos roscados -
+                                                Característicasnación</a>
                                         </button>
                                     </li>
                                     <li>
@@ -147,11 +148,13 @@
                 </div>
                 <div class="img-container extra-image">
                     <img src="../assets/slide4//image27.png" alt="Imagen adicional" onclick="openImage(this)">
-                    <p>Las máquinas están formado por un elevado número de piezas y conjuntos que deben interactuar entre ellos manteniendo sus posiciones relativas, se necesita mantener una unión entre ellos, y puesto que cada parte realiza una función determinada, también requiere un tipo de unión diferente.</p>
+                    <p>Las máquinas están formado por un elevado número de piezas y conjuntos que deben interactuar
+                        entre ellos manteniendo sus posiciones relativas, se necesita mantener una unión entre ellos, y
+                        puesto que cada parte realiza una función determinada, también requiere un tipo de unión
+                        diferente.
+                    </p>
                 </div>
             </div>
-
-
 
             <!-- Modal con imagen agrandada -->
             <div class="overlay" onclick="closeImage()">
@@ -163,40 +166,40 @@
     </div>
 
     <script>
-         function toggleExtraImage() {
-        let extraImage = document.querySelector('.extra-image');
-        extraImage.classList.toggle('show'); // Alterna entre mostrar y ocultar la imagen extra
-    }
+        function toggleExtraImage() {
+            let extraImage = document.querySelector('.extra-image');
+            extraImage.classList.toggle('show'); // Alterna entre mostrar y ocultar la imagen extra
+        }
         // Función para cambiar entre modo claro y oscuro
-    function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        let button = document.querySelector('.toggle-theme');
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            let button = document.querySelector('.toggle-theme');
 
-        if (document.body.classList.contains('dark-mode')) {
-            button.textContent = "☀️ Modo Claro";
-            localStorage.setItem('theme', 'dark'); // Guarda el estado en localStorage
-        } else {
-            button.textContent = "🌙 Modo Oscuro";
-            localStorage.setItem('theme', 'light'); // Guarda el estado en localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                button.textContent = "☀️ Modo Claro";
+                localStorage.setItem('theme', 'dark'); // Guarda el estado en localStorage
+            } else {
+                button.textContent = "🌙 Modo Oscuro";
+                localStorage.setItem('theme', 'light'); // Guarda el estado en localStorage
+            }
         }
-    }
 
-    // Función para aplicar el tema guardado al cargar la página
-    function loadTheme() {
-        const savedTheme = localStorage.getItem('theme'); // Obtiene el estado guardado
-        let button = document.querySelector('.toggle-theme');
+        // Función para aplicar el tema guardado al cargar la página
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme'); // Obtiene el estado guardado
+            let button = document.querySelector('.toggle-theme');
 
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            button.textContent = "☀️ Modo Claro";
-        } else {
-            document.body.classList.remove('dark-mode');
-            button.textContent = "🌙 Modo Oscuro";
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                button.textContent = "☀️ Modo Claro";
+            } else {
+                document.body.classList.remove('dark-mode');
+                button.textContent = "🌙 Modo Oscuro";
+            }
         }
-    }
 
-    // Llamar a la función cuando se carga la página
-    document.addEventListener("DOMContentLoaded", loadTheme);
+        // Llamar a la función cuando se carga la página
+        document.addEventListener("DOMContentLoaded", loadTheme);
 
         function openImage(img) {
             document.querySelector(".overlay img").src = img.src;
@@ -209,8 +212,8 @@
 
 
         function nextPage() {
-        window.location.href = "slide5.html"; // Reemplaza con la URL de tu página siguiente
-    }
+            window.location.href = "slide5.html"; // Reemplaza con la URL de tu página siguiente
+        }
     </script>
 </body>
 
