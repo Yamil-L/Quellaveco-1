@@ -14,7 +14,7 @@
 @font-face {
     font-family: "Aa Smart Sans";
     src: url("fonts/AASmartSans-Bold.woff") format("woff"),
-         url("fonts/AASmartSans-Bold.woff2") format("woff2");
+        url("fonts/AASmartSans-Bold.woff2") format("woff2");
 
     font-weight: bolder;
     font-style: normal;
@@ -23,7 +23,7 @@
 @font-face {
     font-family: "Aa Smart Sans";
     src: url("fonts/AASmartSans-SemiBold.woff") format("woff"),
-         url("fonts/AASmartSans-SemiBold.woff2") format("woff2");
+        url("fonts/AASmartSans-SemiBold.woff2") format("woff2");
 
     font-weight: bold;
     font-style: normal;
@@ -32,7 +32,7 @@
 @font-face {
     font-family: "Aa Smart Sans";
     src: url("fonts/AASmartSans-Regular.woff") format("woff"),
-         url("fonts/AASmartSans-Regular.woff2") format("woff2");
+        url("fonts/AASmartSans-Regular.woff2") format("woff2");
 
     font-weight: normal;
     font-style: normal;
@@ -42,7 +42,7 @@
 @font-face {
     font-family: "Aa Smart Sans";
     src: url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff") format("woff"),
-         url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff2") format("woff2");
+        url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff2") format("woff2");
 
     font-weight: lighter;
     font-style: normal;
@@ -57,7 +57,7 @@
 
 body {
     font-weight: normal;
-    background-color: #FFF;
+    background: rgba(39, 133, 199, 0.3);
     min-height: 100dvh;
 }
 
@@ -72,7 +72,7 @@ body {
     height: 100vh;
     width: 300px;
 
-    background: linear-gradient(25deg, var(--quellaveco-azul-claro) , var(--quellaveco-azul-oscuro) 60%);
+    background: linear-gradient(25deg, var(--quellaveco-azul-claro), var(--quellaveco-azul-oscuro) 60%);
     font-weight: bold;
 
     position: sticky;
@@ -118,7 +118,7 @@ body {
 }
 
 #menu button:hover {
-    background-color: var(--quellaveco-azul);
+    background-color: var(--quellaveco-azul-claro);
     color: var(--color-blanco);
 }
 
@@ -128,7 +128,7 @@ body {
 
 #menu ul li a {
     text-decoration: none;
-    color: var(--quellaveco-azul);
+    color: var(--color-blanco);
     text-align: left;
 }
 
@@ -176,7 +176,7 @@ body {
     }
 }
 
-#sidebar.close #search-btn:hover svg{
+#sidebar.close #search-btn:hover svg {
     fill: var(--quellaveco-rojo);
 }
 
@@ -192,7 +192,7 @@ body {
     }
 }
 
-#sidebar.close .dropdown-btn:hover svg{
+#sidebar.close .dropdown-btn:hover svg {
     fill: var(--quellaveco-rojo);
 }
 
@@ -200,18 +200,19 @@ body {
     display: grid;
     place-content: center;
     height: 50px;
-    background-color: #2785C7;
 }
 
 #sidebar.close #logout-seccion svg {
-    height: 40px;
+    height: 30px;
 }
-
-
 
 #sidebar.close #logout-seccion #numero-unidad,
 #sidebar.close #logout-seccion #descripcion-unidad {
     display: none;
+}
+
+#sidebar.close #logout-seccion #logout-btn:hover svg {
+    fill: var(--quellaveco-rojo);
 }
 
 /* SHOW CONTENT */
@@ -279,7 +280,7 @@ body {
     border: none;
 
     svg {
-        fill: var(--quellaveco-azul);
+        fill: var(--color-blanco);
     }
 }
 
@@ -346,7 +347,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, rgba(39, 133, 199, 0.2) 10%, var(--color-blanco) 90%);
+    background: linear-gradient(to left,  var(--color-blanco) 70%, rgba(39, 133, 199, 0.1));
 }
 
 /* TITLE */
@@ -355,28 +356,23 @@ main {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.left-box,
+
 .right-box {
     position: absolute;
     background-color: var(--quellaveco-azul);
-}
-
-.left-box {
-    bottom: 0;
-    width: 100px;
-    height: 130px;
-    
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-}
-
-.right-box {
     right: 0px;
     top: 10px;
-    width: 220px;
+    width: 100px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
 }
 
 #title h2 {
@@ -396,7 +392,7 @@ main {
     place-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    
+
     flex-grow: 1;
     background-color: var();
 }
@@ -426,7 +422,8 @@ main {
 }
 
 .text {
-    grid-column: 1 / -1;  /* Ocupa todo el ancho */
+    grid-column: 1 / -1;
+    /* Ocupa todo el ancho */
     padding-left: 100px;
     font-size: 1.5vw;
     color: #333;
@@ -462,7 +459,7 @@ main {
 .toggle-theme:hover {
     background: #0040ff;
     transform: scale(1.1);
-    
+
 }
 
 /* Animaciones */
@@ -564,6 +561,7 @@ main {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -575,6 +573,7 @@ main {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -586,6 +585,7 @@ main {
         transform: scale(0.8);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -594,27 +594,20 @@ main {
 
 
 
-    .next-page-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-        transition: transform 0.3s ease, background 0.3s ease;
-    }
+.next-page-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
 
-    .next-page-btn:hover {
-        transform: scale(1.2);
-    }
+.next-page-btn:hover {
+    transform: scale(1.2);
+}
 
-    .next-page-btn i {
-        transition: transform 0.3s ease;
-    }
-
-    .next-page-btn:hover i {
-        transform: translateX(5px); /* Mueve la flecha ligeramente a la derecha */
-    }
-
-
-    
+.next-page-btn i {
+    transition: transform 0.3s ease;
+}
