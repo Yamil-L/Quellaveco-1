@@ -142,14 +142,11 @@
                 <div class="img-container">
                     <img src="../assets/slide4/image26.png" alt="Tornillos y tuercas" onclick="openImage(this)">
                 </div>
+                <div class="img-container" id="toggleImage">
+                    <img src="../assets/slide4/informacion.png" alt="Diagrama de tornillo" onclick="toggleExtraImage()">
+                </div>
                 <div class="img-container extra-image">
-                    <div class="img-container">
-                        <img src="../assets/slide4/informacion 1.png" alt="Diagrama de tornillo" onclick="toggleExtraImage()">
-                    </div>
-                    <img src="../assets/slide4/image27.png.png" alt="Imagen adicional "onclick="openImage(this)">
-                    <p>
-                        Las máquinas están formado por un elevado número de piezas y conjuntos que deben interactuar entre ellos manteniendo sus posiciones relativas, se necesita mantener una unión entre ellos, y puesto que cada parte realiza una función determinada, también requiere un tipo de unión diferente.
-                    </p>
+                    <img src="../assets/slide4//image27.png" alt="Imagen adicional">
                 </div>
             </div>
 
@@ -167,7 +164,7 @@
     <script>
          function toggleExtraImage() {
         let extraImage = document.querySelector('.extra-image');
-        extraImage.classList.toggle('show'); // Alterna la clase .show
+        extraImage.classList.toggle('show'); // Alterna entre mostrar y ocultar la imagen extra
     }
         // Función para cambiar entre modo claro y oscuro
     function toggleTheme() {
