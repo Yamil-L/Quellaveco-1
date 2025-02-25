@@ -1,16 +1,15 @@
 .content {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 5em;
 }
 
 .content h2 {
   margin-top: 50px;
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: normal;
-  align-items: center;
   background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
   background-clip: text;
   -webkit-background-clip: text;
