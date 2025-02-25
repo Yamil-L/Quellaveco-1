@@ -1,74 +1,59 @@
 .content {
     display: flex;
-    /* Coloca el texto y la imagen en la misma línea */
     align-items: center;
-    /* Alinea verticalmente al centro */
-    /* Espacio entre texto e imagen */
     justify-content: space-between;
-    padding: 1.8em;
+    padding: 0 1.8em 1em 1.8em;
 }
 
 .text {
     margin-left: 40px;
     width: 50%;
-    /* El texto ocupa el 60% del espacio */
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* Estilo para la lista ordenada */
 .custom-list {
-    list-style: none;
-    /* Oculta los estilos predeterminados */
-    padding-left: 0;
+    list-style-type: none;
+    padding: 0;
+    counter-reset: item;
+    font-weight: bold;
 }
 
 /* Aplica estilos a cada elemento de la lista */
 .custom-list li {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 1em;
-    /* Espacio para el círculo */
-    color: #001f87;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--quellaveco-azul);
+    margin: 0.4em;
 }
 
 /* Crea el círculo alrededor de la letra */
 .custom-list li::before {
-    content: counter(list-item, lower-alpha);
-    /* Usa letras en lugar de números */
-
-    position: absolute;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-weight: bold;
-    color: #001f87;
-    /* Azul para la letra */
-    background-color: white;
-    /* Fondo blanco */
-    border: 2px solid #001f87;
-    /* Borde azul */
+    content: counter(item, lower-alpha);
+    counter-increment: item;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    /* Hace que el fondo sea circular */
-    display: inline-block;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: 500;
+    flex-shrink: 0;
+    font-weight: bold;
+    color: var(--quellaveco-azul);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .img-container img {
     cursor: none;
     max-width: 90%;
     max-height: 90%;
-    height: auto;
-    width: auto;
-    object-fit: contain;
-    border: 2px solid var(--quellaveco-azul);
+    padding: 0;
+    background: transparent;
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-height: 500px;
-    margin-left: 20px;
-}
-
-.img-container img:hover {
-    transform: scale(1);
-    /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }

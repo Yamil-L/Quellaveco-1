@@ -415,7 +415,7 @@ main {
 .content {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 50px;
+    gap: 0.5em;
     justify-content: center;
     align-items: center;
 }
@@ -443,24 +443,6 @@ main {
 .img-container:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
-
-.text {
-    grid-column: 1 / -1;
-    font-size: 1.5vw;
-    color: #333;
-    animation: fadeIn 1.2s ease-in-out forwards;
-}
-
-.text ul {
-    padding: 0;
-    margin: 0;
-}
-
-.text li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-    color: #333;
 }
 
 /* Animaciones */
