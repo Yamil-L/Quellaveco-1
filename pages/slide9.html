@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../assets/slide9/styles.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
@@ -14,7 +15,7 @@
     <div class="container">
         <nav id="sidebar">
             <div id="logo-seccion">
-                <a href="index.html">
+                <a href="/index.html">
                     <img src="../logo2.png" height="15px" alt="logo">
                 </a>
                 <button onclick="toggleSidebar()" id="toggle-btn">
@@ -143,14 +144,6 @@
                 <div class="img-container">
                     <img src="../assets/slide9/image38.png" alt="Diagrama de tornillo" onclick="openImage(this)">
                 </div>
-                <!-- <div class="text">
-                    <ul>
-                        <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
-                        <li>Tornillos, espárragos, varillas roscadas, etc.</li>
-                        <li>Tuercas y arandelas.</li>
-                        <li>Elementos de seguridad.</li>
-                    </ul>
-                </div> -->
             </div>
         </main>
     </div>
@@ -161,33 +154,6 @@
     </div>
 
     <script>
-        // Función para cambiar entre modo claro y oscuro
-    function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        let button = document.querySelector('.toggle-theme');
-
-        if (document.body.classList.contains('dark-mode')) {
-            button.textContent = "☀️ Modo Claro";
-            localStorage.setItem('theme', 'dark'); // Guarda el estado en localStorage
-        } else {
-            button.textContent = "🌙 Modo Oscuro";
-            localStorage.setItem('theme', 'light'); // Guarda el estado en localStorage
-        }
-    }
-
-    // Función para aplicar el tema guardado al cargar la página
-    function loadTheme() {
-        const savedTheme = localStorage.getItem('theme'); // Obtiene el estado guardado
-        let button = document.querySelector('.toggle-theme');
-
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            button.textContent = "☀️ Modo Claro";
-        } else {
-            document.body.classList.remove('dark-mode');
-            button.textContent = "🌙 Modo Oscuro";
-        }
-    }
 
     // Llamar a la función cuando se carga la página
     document.addEventListener("DOMContentLoaded", loadTheme);
