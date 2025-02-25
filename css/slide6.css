@@ -3,76 +3,65 @@ main {
     grid-template-rows: auto 1fr;
 }
 
-/* .content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 50px;
-    place-content: center;
-    background-color: #f0f0f0;
-    } */
-
-/* Contenedor principal centrado */
-/* Contenedor principal centrado */
-
 .content {
+    background-color: aqua;
+}
+
+.text-container {
+    background-color: blueviolet;
+}
+
+.images {
+    background-color: yellowgreen;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Centra horizontalmente */
-    padding: 5em;
-    gap: 20px;
 }
 
 /* Contenedor de texto oculto por defecto */
-.text-container {
-
+/* .text-container {
     font-size: 1.2rem;
     color: #001f87;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     transform: translateX(-50px);
-    /* Mover a la izquierda inicialmente */
     text-align: right;
-}
+} */
 
 /* Mostrar texto con animación */
-.show-text {
+/* .show-text {
     opacity: 1;
     transform: translateX(0);
-}
+} */
 
 /* Contenedor de imágenes centrado */
-.images {
+/* .images {
     display: flex;
     justify-content: center;
-    /* Centra las imágenes */
     align-items: center;
     gap: 20px;
     width: 70%;
-}
+} */
 
-.img-container img {
+/* .img-container img {
     width: 200px;
-    /* Ajusta el tamaño según sea necesario */
     cursor: pointer;
     border-radius: 10px;
     border: 3px solid transparent;
-}
+} */
 
 /* Difuminar las imágenes no seleccionadas */
-.blurred {
+/* .blurred {
     opacity: 0.5;
-}
+} */
 
 /* Mover imágenes a la derecha cuando se selecciona una */
-.shifted {
+/* .shifted {
     transform: translateX(30px);
-}
+} */
 
 /* Resaltar la imagen seleccionada con un borde degradado */
-.highlighted {
+/* .highlighted {
     border: 3px solid;
     border-image-source: linear-gradient(to bottom, red, blue);
     border-image-slice: 1;
-}
+} */

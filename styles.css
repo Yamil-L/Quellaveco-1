@@ -424,7 +424,7 @@ main {
     max-width: 90%;
     max-height: 90%;
     padding: 0.4em;
-    display: inline-flex; /* Hace que solo ocupe el tamaño del contenido */
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 0.5em;
@@ -499,21 +499,6 @@ main {
     }
 }
 
-/* Botón de cierre */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.close-btn:hover {
-    transform: scale(1.2);
-}
-
 /* Animaciones */
 @keyframes fadeIn {
     from {
@@ -551,7 +536,7 @@ main {
     }
 }
 
-
+/* BOTON SIGUIENTE */
 
 .next-page-btn {
     background: none;
