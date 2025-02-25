@@ -357,8 +357,8 @@ body {
 
 main {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     background: linear-gradient(to left,  var(--color-blanco) 70%, rgba(39, 133, 199, 0.1));
 }
 
