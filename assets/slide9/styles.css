@@ -11,6 +11,7 @@
     justify-content: center;
     width: 50%;
     font-size: 14px;
+    gap: 2em;
 }
 
 /* Estilo para la lista ordenada */
@@ -19,6 +20,10 @@
     padding: 0;
     counter-reset: item;
     font-weight: bold;
+}
+
+.custom-list:nth-child(2) {
+    counter-reset: item 14;
 }
 
 /* Aplica estilos a cada elemento de la lista */
@@ -32,7 +37,7 @@
 
 /* Crea el círculo alrededor de la letra */
 .custom-list li::before {
-    content: counter(item, lower-alpha);
+    content: counter(item, decimal);
     counter-increment: item;
     width: 25px;
     height: 25px;
