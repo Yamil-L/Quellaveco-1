@@ -136,7 +136,7 @@
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
-                <h2>Características, tipos y designación de los elementos roscados</h2>
+                <h2>Elementos de unión desmontables</h2>
             </div>
 
             <div class="content">
@@ -154,9 +154,17 @@
                         diferente.
                     </p>
                 </div>
-            </div>
-        </main>
+                <!-- Modal con imagen agrandada -->
+    <div class="overlay" onclick="closeImage()">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Imagen ampliada">
     </div>
+            </div>
+            
+        </main>
+        
+    </div>
+    
 
     <script>
         function toggleExtraImage() {
@@ -164,8 +172,6 @@
             extraImage.classList.toggle('show'); // Alterna entre mostrar y ocultar la imagen extra
         }
 
-        // Llamar a la función cuando se carga la página
-        document.addEventListener("DOMContentLoaded", loadTheme);
 
         function openImage(img) {
             document.querySelector(".overlay img").src = img.src;
@@ -173,7 +179,7 @@
         }
 
         function closeImage() {
-            document.querySelector(".overlay").style.display = "flex";
+            document.querySelector(".overlay").style.display = "none";
         }
 
         function nextPage() {
