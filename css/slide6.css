@@ -4,64 +4,52 @@ main {
 }
 
 .content {
-    background-color: aqua;
+    padding: 5em;
+    gap: 20px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.text-container {
-    background-color: blueviolet;
+.text-container p{
+    font-size: 1.3vw;
+    color: var(--quellaveco-gris);
+    margin-bottom: 1em;
+}
+
+.text-container h2 {
+    margin-top: 50px;
+    font-size: 2vw;
+    align-items: center;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out forwards;
 }
 
 .images {
-    background-color: yellowgreen;
-    display: flex;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-/* Contenedor de texto oculto por defecto */
-/* .text-container {
-    font-size: 1.2rem;
-    color: #001f87;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    transform: translateX(-50px);
-    text-align: right;
-} */
+.img-container:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-content: right;
+}
 
-/* Mostrar texto con animación */
-/* .show-text {
-    opacity: 1;
-    transform: translateX(0);
-} */
+.img-container:nth-child(2) {
+    align-items: flex-end;
+    width: 80%;
+}
 
-/* Contenedor de imágenes centrado */
-/* .images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 70%;
-} */
-
-/* .img-container img {
-    width: 200px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 3px solid transparent;
-} */
-
-/* Difuminar las imágenes no seleccionadas */
-/* .blurred {
-    opacity: 0.5;
-} */
-
-/* Mover imágenes a la derecha cuando se selecciona una */
-/* .shifted {
-    transform: translateX(30px);
-} */
-
-/* Resaltar la imagen seleccionada con un borde degradado */
-/* .highlighted {
-    border: 3px solid;
-    border-image-source: linear-gradient(to bottom, red, blue);
-    border-image-slice: 1;
-} */
+.img-container:nth-child(3) {
+    align-items: flex-start;
+    width: 80%;
+}
