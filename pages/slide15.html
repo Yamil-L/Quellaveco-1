@@ -7,7 +7,7 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../css/slide14.css">
+    <link rel="stylesheet" href="../css/slide15.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -135,18 +135,96 @@
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
-                <h2>Identificación de Grado y Clase</h2>
+                <h2>Resistencia del tornillo UNC</h2>
             </div>
 
             <div class="content">
-                <div class="img-container">
-                    <h1>Grado</h1>
-                    <img src="../assets/slide14/image48.png" alt="Tornillos y tuercas" onclick="openImage(this)">
-                </div>
-                <div class="img-container">
-                    <h1>Clase</h1>
-                    <img src="../assets/slide14/image49.png" alt="Diagrama de tornillo" onclick="openImage(this)">
-                </div>
+                <table>
+                    <tr class="header">
+                      <th>Grado SAE</th>
+                      <th>Intervalo de tamaños (inclusive) (in)</th>
+                      <th>Resistencia límite mínima a la tracción S<sub>p</sub> (ksi)</th>
+                      <th>Resistencia de fluencia mínima a la tracción S<sub>y</sub> (ksi)</th>
+                      <th>Resistencia última mínima a la tracción S<sub>u</sub> (ksi)</th>
+                      <th>Características del acero</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>¼ a 1½</td>
+                      <td>33</td>
+                      <td>36</td>
+                      <td>60</td>
+                      <td class="left-align">Medio o bajo carbono</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">2</td>
+                      <td>¼ a ¾</td>
+                      <td>55</td>
+                      <td>57</td>
+                      <td>74</td>
+                      <td rowspan="2" class="left-align">Medio o bajo carbono</td>
+                    </tr>
+                    <tr>
+                      <td>7/8 a 1½</td>
+                      <td>33</td>
+                      <td>36</td>
+                      <td>60</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>¼ a 1½</td>
+                      <td>65</td>
+                      <td>100</td>
+                      <td>115</td>
+                      <td class="left-align">Medio carbono estirado en frío</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">5</td>
+                      <td>¼ a 1</td>
+                      <td>85</td>
+                      <td>92</td>
+                      <td>120</td>
+                      <td rowspan="2" class="left-align">Medio carbono templado y revenido</td>
+                    </tr>
+                    <tr>
+                      <td>1 1/8 a 1½</td>
+                      <td>74</td>
+                      <td>81</td>
+                      <td>105</td>
+                    </tr>
+                    <tr>
+                      <td>5.2</td>
+                      <td>¼ a 1</td>
+                      <td>85</td>
+                      <td>92</td>
+                      <td>120</td>
+                      <td class="left-align">Martensítico de bajo carbono, templado y revenido</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>¼ a 1½</td>
+                      <td>105</td>
+                      <td>115</td>
+                      <td>133</td>
+                      <td class="left-align">Aleado de medio carbono, templado y revenido</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>¼ a 1½</td>
+                      <td>120</td>
+                      <td>130</td>
+                      <td>150</td>
+                      <td class="left-align">Aleado de medio carbono, templado y revenido</td>
+                    </tr>
+                    <tr>
+                      <td>8.2</td>
+                      <td>¼ a 1</td>
+                      <td>120</td>
+                      <td>130</td>
+                      <td>150</td>
+                      <td class="left-align">Martensítico de bajo carbono, templado y revenido</td>
+                    </tr>
+                  </table>
             </div>
         </main>
         <!-- Modal con imagen agrandada -->
@@ -171,7 +249,7 @@
 
 
         function nextPage() {
-            window.location.href = "slide15.html"; // Reemplaza con la URL de tu página siguiente
+            window.location.href = "slide16.html"; // Reemplaza con la URL de tu página siguiente
         }
     </script>
 </body>
