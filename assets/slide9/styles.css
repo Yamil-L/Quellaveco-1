@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 1.8em 1em 1.8em;
-    height: 70%;
 }
 
 .text {
@@ -50,10 +49,11 @@
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.content img {
+.img-container img {
     cursor: none;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 60%;
+    max-height: 60%;
+    padding: 0;
     background: transparent;
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
