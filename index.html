@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Trabajo 1.1</title>
+    <title>Mantenimiento Industrial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -142,32 +142,12 @@
             <div class="content">
                 <h2>Mantenimiento Industrial</h2>
             </div>
-
-            <!-- Modal con imagen agrandada -->
-            <div class="overlay" onclick="closeImage()">
-                <span class="close-btn">&times;</span>
-                <img src="" alt="Imagen ampliada">
-            </div>
-
         </main>
     </div>
 </body>
 <script>
-    // Llamar a la función cuando se carga la página
-    document.addEventListener("DOMContentLoaded", loadTheme);
-
-    function openImage(img) {
-        document.querySelector(".overlay img").src = img.src;
-        document.querySelector(".overlay").style.display = "flex";
-    }
-
-    function closeImage() {
-        document.querySelector(".overlay").style.display = "none";
-    }
-
-
     function nextPage() {
-        window.location.href = "pages/slide1.html"; // Reemplaza con la URL de tu página siguiente
+        window.location.href = "pages/slide1.html";
     }
 </script>
 

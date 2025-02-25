@@ -90,7 +90,8 @@
                                     </li>
                                     <li>
                                         <button onclick=toggleSubMenu(this) class="link">
-                                            <a href="slide9.html">1.3 DesigElementos roscados - Característicasnación</a>
+                                            <a href="slide9.html">1.3 DesigElementos roscados -
+                                                Característicasnación</a>
                                         </button>
                                     </li>
                                     <li>
@@ -144,106 +145,56 @@
                 </div>
                 <div class="images">
                     <div class="img-container">
-                        <img src="../assets/slide6/image1.png" alt="Tornillos y tuercas" onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
+                        <img src="../assets/slide6/image1.png" alt="Tornillos y tuercas"
+                            onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
                     </div>
                     <div class="img-container">
-                        <img src="../assets/slide6/image2.png" alt="Diagrama de tornillo" onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
+                        <img src="../assets/slide6/image2.png" alt="Diagrama de tornillo"
+                            onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
                     </div>
                     <div class="img-container">
-                        <img src="../assets/slide6/image3.png" alt="Diagrama de tornillo" onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
+                        <img src="../assets/slide6/image3.png" alt="Diagrama de tornillo"
+                            onclick="toggleEffect(this, 'Con la utilización de elementos atornillados se pretenden conseguir uniones entre diferentes piezas, en las que se trata de impedir su separación en la dirección de los ejes de los tornillos. Los esfuerzos de compresión se consiguen mediante un óptimo cerramiento de la unión atornillada.')">
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- Modal con imagen agrandada -->
-            <div class="overlay" onclick="closeImage()">
-                <span class="close-btn">&times;</span>
-                <img src="" alt="Imagen ampliada">
-            </div>
-
         </main>
     </div>
 
     <script>
         function toggleEffect(clickedImage, text) {
-        let allImages = document.querySelectorAll('.img-container img');
-        let textContainer = document.getElementById('extra-text');
+            let allImages = document.querySelectorAll('.img-container img');
+            let textContainer = document.getElementById('extra-text');
 
-        // Si la imagen ya está activa, restaurar la vista original
-        if (clickedImage.classList.contains('active')) {
-            allImages.forEach(img => {
-                img.classList.remove('blurred', 'shifted', 'highlighted');
-            });
+            // Si la imagen ya está activa, restaurar la vista original
+            if (clickedImage.classList.contains('active')) {
+                allImages.forEach(img => {
+                    img.classList.remove('blurred', 'shifted', 'highlighted');
+                });
 
-            textContainer.textContent = "";
-            textContainer.classList.remove('show-text');
-            clickedImage.classList.remove('active');
-        } else {
-            // Aplicar efecto a todas las imágenes excepto la seleccionada
-            allImages.forEach(img => {
-                img.classList.add('blurred', 'shifted');
-                img.classList.remove('highlighted');
-            });
+                textContainer.textContent = "";
+                textContainer.classList.remove('show-text');
+                clickedImage.classList.remove('active');
+            } else {
+                // Aplicar efecto a todas las imágenes excepto la seleccionada
+                allImages.forEach(img => {
+                    img.classList.add('blurred', 'shifted');
+                    img.classList.remove('highlighted');
+                });
 
-            // Remover efecto de difuminado en la imagen seleccionada
-            clickedImage.classList.remove('blurred');
-            clickedImage.classList.add('active', 'highlighted');
+                // Remover efecto de difuminado en la imagen seleccionada
+                clickedImage.classList.remove('blurred');
+                clickedImage.classList.add('active', 'highlighted');
 
-            // Mostrar el texto a la izquierda
-            textContainer.textContent = text;
-            textContainer.classList.add('show-text');
+                // Mostrar el texto a la izquierda
+                textContainer.textContent = text;
+                textContainer.classList.add('show-text');
+            }
         }
-    }
-         function toggleExtraImage() {
-        let extraImage = document.querySelector('.extra-image');
-        extraImage.classList.toggle('show'); // Alterna la clase .show
-    }
-        // Función para cambiar entre modo claro y oscuro
-    function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        let button = document.querySelector('.toggle-theme');
-
-        if (document.body.classList.contains('dark-mode')) {
-            button.textContent = "☀️ Modo Claro";
-            localStorage.setItem('theme', 'dark'); // Guarda el estado en localStorage
-        } else {
-            button.textContent = "🌙 Modo Oscuro";
-            localStorage.setItem('theme', 'light'); // Guarda el estado en localStorage
-        }
-    }
-
-    // Función para aplicar el tema guardado al cargar la página
-    function loadTheme() {
-        const savedTheme = localStorage.getItem('theme'); // Obtiene el estado guardado
-        let button = document.querySelector('.toggle-theme');
-
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            button.textContent = "☀️ Modo Claro";
-        } else {
-            document.body.classList.remove('dark-mode');
-            button.textContent = "🌙 Modo Oscuro";
-        }
-    }
-
-    // Llamar a la función cuando se carga la página
-    document.addEventListener("DOMContentLoaded", loadTheme);
-
-        function openImage(img) {
-            document.querySelector(".overlay img").src = img.src;
-            document.querySelector(".overlay").style.display = "flex";
-        }
-
-        function closeImage() {
-            document.querySelector(".overlay").style.display = "none";
-        }
-
 
         function nextPage() {
-        window.location.href = "slide7.html"; // Reemplaza con la URL de tu página siguiente
-    }
+            window.location.href = "slide7.html"; // Reemplaza con la URL de tu página siguiente
+        }
     </script>
 </body>
 

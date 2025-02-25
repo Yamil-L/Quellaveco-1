@@ -9,6 +9,7 @@ main {
     justify-content: center;
     gap: 20px;
     position: relative;
+    padding: 0.8em;
 }
 
 .img-container {

@@ -15,7 +15,7 @@ function toggleSidebar() {
 function toggleSubMenu(button) {
     button.nextElementSibling.classList.toggle('show');
 
-    if(sidebar.classList.contains('close')) {
+    if (sidebar.classList.contains('close')) {
         sidebar.classList.toggle('close')
     }
 }
