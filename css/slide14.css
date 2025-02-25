@@ -1,0 +1,15 @@
+.content {
+    display: grid;
+    place-content: center;
+    
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+    padding: 0 1.8em 0 1.8em;
+}
+
+.img-container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto 1fr;
+    gap: 1.8em;
+}
