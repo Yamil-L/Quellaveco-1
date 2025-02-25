@@ -3,6 +3,14 @@ main {
     grid-template-rows: auto 1fr;
 }
 
+#info {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    margin: 0.5em;
+    height: 23em;
+}
+
 #title {
     padding-left: 3em;
     padding-top: 2em;
