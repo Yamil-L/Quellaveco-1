@@ -1,10 +1,13 @@
 .text h3{
-    color: #031795;
+    padding-top: 2em;
+    color: var(--quellaveco-azul);
 }
 
 .text ul{
     margin-top: 50px;
+    list-style-position: inside;
 }
+
 .text li{
-    color: #8b8b8b;
+    color: var(--quellaveco-gris);
 }
