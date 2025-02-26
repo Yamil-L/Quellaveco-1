@@ -142,97 +142,15 @@
                 <div class="text-container" id="extra-text">
                     <h2>Mantenimiento e Inspección de los Pernos</h2>
                     <p>
-                        Para obtener un buen rendimiento de los pernos nuevos o usados, se debe prestar cuidadosa atención a la selección, manejo, inspección e instalación de los mismos.
+                        Para obtener un buen rendimiento de los pernos nuevos o usados, se debe prestar cuidadosa
+                        atención a la selección, manejo, inspección e instalación de los mismos.
                     </p>
                 </div>
-                <!-- <div class="images">
-                    <div class="img-container">
-                        <img src="../assets/slide6/image1.png" alt="Tornillos y tuercas">
-                    </div>
-                    <div class="img-container">
-                        <img src="../assets/slide6/image2.png" alt="Diagrama de tornillo">
-                    </div>
-                    <div class="img-container">
-                        <img src="../assets/slide6/image3.png" alt="Diagrama de tornillo">
-                    </div>
-                </div> -->
             </div>
         </main>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Seleccionar todos los contenedores de imágenes
-            const imgContainers = document.querySelectorAll('.img-container');
-
-            // Almacenar las rutas e información de las imágenes originales
-            const originalImages = [];
-
-            imgContainers.forEach((container, index) => {
-                const img = container.querySelector('img');
-                originalImages.push({
-                    src: img.src,
-                    alt: img.alt
-                });
-
-                // Agregar evento click a cada imagen
-                img.addEventListener('click', function () {
-                    // Guardar la información de la imagen clickeada
-                    const clickedSrc = this.src;
-                    const clickedAlt = this.alt;
-
-                    // Obtener la imagen principal (siempre en el primer contenedor)
-                    const mainImg = imgContainers[0].querySelector('img');
-
-                    // Si la imagen clickeada no es la principal, hacer el intercambio
-                    if (this !== mainImg) {
-                        // Guardar los datos de la imagen principal
-                        const mainSrc = mainImg.src;
-                        const mainAlt = mainImg.alt;
-
-                        // Establecer la imagen clickeada como principal
-                        mainImg.src = clickedSrc;
-                        mainImg.alt = clickedAlt;
-
-                        // La imagen principal anterior se mueve a la posición de la clickeada
-                        this.src = mainSrc;
-                        this.alt = mainAlt;
-
-                        // Opcional: Agregar efecto de transición
-                        mainImg.classList.add('image-transition');
-                        this.classList.add('image-transition');
-
-                        setTimeout(() => {
-                            mainImg.classList.remove('image-transition');
-                            this.classList.remove('image-transition');
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Agregar este CSS para la transición (opcional)
-        const style = document.createElement('style');
-        style.textContent = `
-                                .image-transition {
-                                    transition: all 0.3s ease;
-                                }
-                                
-                                .img-container:nth-child(2) img, .img-container:nth-child(3) img {
-                                    opacity: 0.8;
-                                    cursor: pointer;
-                                }
-                                
-                                .img-container:nth-child(2) img:hover, .img-container:nth-child(3) img:hover {
-                                    opacity: 1;
-                                }
-                                
-                                .img-container:nth-child(1) img {
-                                    opacity: 1;
-                                }
-                            `;
-        document.head.appendChild(style);
-
         function nextPage() {
             window.location.href = "slide26.html"; // Reemplaza con la URL de tu página siguiente
         }

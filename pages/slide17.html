@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../css/slide17.css">
+    <style>
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -140,41 +146,12 @@
             </div>
 
             <div class="content">
-                <div class="img-container">
-                    <img src="../assets/slide17/image 118.png" alt="Tornillos y tuercas">
-                </div>
-
-                <!-- <div class="text">
-                    <ul>
-                        <li>Los elementos más importantes que intervienen en este tipo de unión son:</li>
-                        <li>Tornillos, espárragos, varillas roscadas, etc.</li>
-                        <li>Tuercas y arandelas.</li>
-                        <li>Elementos de seguridad.</li>
-                    </ul>
-                </div> -->
+                <img src="../assets/slide17/image 118.png" alt="Tornillos y tuercas" onclick="openImage(this)">
             </div>
         </main>
-        <!-- Modal con imagen agrandada -->
-        <div class="overlay" onclick="closeImage()">
-            <span class="close-btn">&times;</span>
-            <img src="" alt="Imagen ampliada">
-        </div>
     </div>
 
     <script>
-        // Llamar a la función cuando se carga la página
-        document.addEventListener("DOMContentLoaded", loadTheme);
-
-        function openImage(img) {
-            document.querySelector(".overlay img").src = img.src;
-            document.querySelector(".overlay").style.display = "flex";
-        }
-
-        function closeImage() {
-            document.querySelector(".overlay").style.display = "none";
-        }
-
-
         function nextPage() {
             window.location.href = "slide18.html"; // Reemplaza con la URL de tu página siguiente
         }
