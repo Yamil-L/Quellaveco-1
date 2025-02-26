@@ -39,16 +39,6 @@
     font-style: normal;
 }
 
-
-@font-face {
-    font-family: "Aa Smart Sans";
-    src: url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff") format("woff"),
-        url("fonts/Helvetica\ Neue\ LT\ Std\ 47\ Light\ Condensed.woff2") format("woff2");
-
-    font-weight: lighter;
-    font-style: normal;
-}
-
 * {
     font-family: "Aa Smart Sans", sans-serif;
     margin: 0;
@@ -123,7 +113,12 @@ img {
     padding: 10px 15px;
     color: var(--color-blanco);
     text-decoration: none;
-    transition: background-color 0.7s;
+    transition: background-color 0.3s;
+    margin-bottom: 3px;
+}
+
+.menu-item button a {
+    padding: 0;
 }
 
 .menu-item a:hover {
@@ -157,7 +152,7 @@ img {
 
     color: var(--color-blanco);
     font-size: 16px;
-    transition: background-color 0.7s;
+    transition: background-color 0.3s;
     text-align: left;
 
     svg {
@@ -185,21 +180,13 @@ img {
     transform: rotate(90deg);
 }
 
-/* SUBMENU */
-.sub-menu {
-    list-style: none;
-    padding-left: 20px;
-    margin: 0;
-    display: none;
-    overflow: hidden;
-}
-
 /* SIDEBAR CLOSE*/
 #sidebar.close {
     width: 60px;
 }
 
 #sidebar.close #logo-seccion {
+    margin: auto;
     img {
         display: none;
     }
@@ -271,7 +258,6 @@ img {
     overflow: hidden;
 }
 
-/* Submenú visible */
 .sub-menu.show {
     display: block;
 }
