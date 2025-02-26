@@ -1,0 +1,37 @@
+.content {
+    grid-template-columns: repeat(1, auto);
+
+}
+
+.content-top{
+    background-color: #fff;
+    align-items: center;
+    text-align: left;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.content-top p{
+    color: #031795;
+}
+
+.content-bot{
+    background-color: #5FB6E81A;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin-left: 25%;
+}
+
+.content-bot p,h3 {
+    color: #fff;
+}
+
+main{
+    /* background: linear-gradient(to top,  #337CF4 25%, #031795); */
+    background: #031795;
+}
