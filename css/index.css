@@ -7,6 +7,7 @@
     padding: 5em;
     background-image: url(/fondo.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content h2 {
