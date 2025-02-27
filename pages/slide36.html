@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../sidebar.css">
-    <link rel="stylesheet" href="../assets/slide10/styles.css">
+    <link rel="stylesheet" href="../css/slide35.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -31,8 +31,8 @@
                 </button>
             </div>
 
-            <div id="menu-container"></div> 
-            
+            <div id="menu-container"></div>
+
             <div id="logout-seccion">
                 <h1 id="numero-unidad">04</h1>
                 <div id="descripcion-unidad">
@@ -62,11 +62,17 @@
                         <li>Seguro para ejes y distanciador, montable y desmontable radialmente sin herramientas.</li>
 
                     </ol>
+                    <div class="img-container">
+                        <img src="../assets/slide36/image69.png.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                    </div>
                 </div>
-                <div class="img-container">
-                    <img src="../assets/slide36/image69.png.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                <div class="des">
+                    <p>Los seguros son elementos cuya función es muy similar a las anteriores. Además, presentan otras ventajas como:</p>
+                    <ul>
+                        <li>Una compensación de pequeñas tolerancias de longitud debido a su gran elasticidad.</li>
+                        <li>Mayores cargas axiales.</li>
+                    </ul>
                 </div>
-                
             </div>
         </main>
     </div>
@@ -78,8 +84,8 @@
 
     <script>
 
-    // Llamar a la función cuando se carga la página
-    document.addEventListener("DOMContentLoaded", loadTheme);
+        // Llamar a la función cuando se carga la página
+        document.addEventListener("DOMContentLoaded", loadTheme);
 
         function openImage(img) {
             document.querySelector(".overlay img").src = img.src;
@@ -91,8 +97,8 @@
         }
 
         function nextPage() {
-        window.location.href = "link_videos.html"; // Reemplaza con la URL de tu página siguiente
-    }
+            window.location.href = "link_videos.html"; // Reemplaza con la URL de tu página siguiente
+        }
     </script>
 </body>
 
