@@ -3,7 +3,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 1.5em;
 }
 
 main h2 {
@@ -57,4 +56,11 @@ main img:nth-child(2) {
     .content {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* AUDIO */
+
+audio {
+    max-width: 50em;
+    background-color: aqua;
 }

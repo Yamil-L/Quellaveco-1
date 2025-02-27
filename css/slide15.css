@@ -52,4 +52,8 @@ td {
         content: attr(data-cell) ": " ;
         font-weight: bold;
     }
+
+    td:last-child {
+        text-align: center;
+    }
 }
