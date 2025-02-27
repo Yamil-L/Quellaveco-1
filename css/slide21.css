@@ -1,5 +1,9 @@
 .content {
     grid-template-columns: repeat(1, auto);
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center;
+    gap: 50px; /* Reduce la separación entre elementos */
 
 }
 
@@ -24,13 +28,18 @@
     border-radius: 15px;
     padding: 20px;
     width: 500px;
-    margin-left: 25%;
+   
 }
 
-.content-bot p,h3 {
+.content-bot h3 {
     color: #fff;
+    margin-bottom: 10px; /* Espacio debajo del título */
 }
 
+.content-bot p {
+    color: #fff;
+    margin-top: 10px; /* Espacio encima del párrafo */
+}
 main{
     /* background: linear-gradient(to top,  #337CF4 25%, #031795); */
     background: #031795;

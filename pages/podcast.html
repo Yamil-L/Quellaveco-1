@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Trabajo 1.1</title>
+    <title>Mantenimiento Industrial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../css/slide5.css">
+    <link rel="stylesheet" href="../css/link_videos.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -27,14 +27,15 @@
                 </button>
             </div>
 
+            <!-- Menú principal -->
             <div id="menu-container"></div> 
 
             <!-- Sección de información y logout -->
             <div id="logout-seccion">
                 <h1 id="numero-unidad">00</h1>
                 <div id="descripcion-unidad">
-                    <h4>Módulo 1 - Unidad 1</h4>
-                    <p>Elementos de unión desmontables</p>
+                    <h4>Módulo 1 - Unidad 6</h4>
+                    <p>Quiz</p>
                 </div>
                 <button id="logout-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -54,20 +55,22 @@
                     </button>
                 </div>
             </div>
+
+            <img src="../logo2.png" alt="logo2">
+            <img src="../Protagonistas de desarrollo 1.png" alt="logo3">
             <div class="content">
-                <h2>Elementos de unión </br> desmontables</h2>
+                <h2 class="boton" onclick="window.open('https://wordwall.net/es/resource/86335370', '_blank');">
+                    Ingresar a Wordwall
+                </h2>
             </div>
-            <p>Mantenimiento Industrial</p>
+            
         </main>
     </div>
-
-    <script>
-        function nextPage() {
-            window.location.href = "slide2.html"; // Reemplaza con la URL de tu página siguiente
-        }
-
-        
-    </script>
 </body>
+<script>
+    function nextPage() {
+        window.location.href = "wordwall.html";
+    }
+</script>
 
 </html>

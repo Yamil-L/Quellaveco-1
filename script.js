@@ -71,3 +71,36 @@ function closeAllSubmenus() {
     openMenus.forEach(menu => menu.classList.remove('show'));
     activeButtons.forEach(btn => btn.classList.remove('active'));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("menu.html") // Carga el menú
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+            initializeMenu(); // Activa los eventos del menú
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+
+function initializeMenu() {
+        // 💡 Aquí vuelves a asignar los eventos que necesita el menú
+
+        // Manejo de los botones de dropdown (submenús)
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                let subMenu = this.nextElementSibling;
+                if (subMenu && subMenu.classList.contains("sub-menu")) {
+                    subMenu.style.display = subMenu.style.display === "block" ? "none" : "block";
+                }
+            });
+        });
+
+        // Manejo del botón de toggle para abrir/cerrar el menú lateral
+        let toggleBtn = document.getElementById("toggle-btn");
+        if (toggleBtn) {
+            toggleBtn.addEventListener("click", function() {
+                document.getElementById("sidebar").classList.toggle("open");
+            });
+        }
+    }
