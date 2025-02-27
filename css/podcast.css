@@ -101,15 +101,32 @@ main img:nth-child(2) {
 }
 
 .wave-bar {
-    background-color: var(--quellaveco-celeste);
-    width: 6px;
-    /* Barras más anchas */
-    height: 5px;
+    width: 6px; /* Ancho de cada barra */
+    height: 5px; /* Altura inicial de las barras */
     margin: 0 3px;
-    /* Más separación */
     border-radius: 3px;
     transition: height 0.2s ease;
+    
+    /* 🔥 Degradado aplicado a cada barra */
+    background: linear-gradient(to right, #ff0000, #351ee0, #347ff6, #1f87c6);
+    background-size: 100px 100px; /* Ajustamos el tamaño del fondo */
 }
+
+.wave-bar:nth-child(1) { background-position: 0% 0; }
+.wave-bar:nth-child(2) { background-position: 6.67% 0; }
+.wave-bar:nth-child(3) { background-position: 13.34% 0; }
+.wave-bar:nth-child(4) { background-position: 20% 0; }
+.wave-bar:nth-child(5) { background-position: 26.67% 0; }
+.wave-bar:nth-child(6) { background-position: 33.34% 0; }
+.wave-bar:nth-child(7) { background-position: 40% 0; }
+.wave-bar:nth-child(8) { background-position: 46.67% 0; }
+.wave-bar:nth-child(9) { background-position: 53.34% 0; }
+.wave-bar:nth-child(10) { background-position: 60% 0; }
+.wave-bar:nth-child(11) { background-position: 66.67% 0; }
+.wave-bar:nth-child(12) { background-position: 73.34% 0; }
+.wave-bar:nth-child(13) { background-position: 80% 0; }
+.wave-bar:nth-child(14) { background-position: 86.67% 0; }
+.wave-bar:nth-child(15) { background-position: 93.34% 0; }
 
 /* Hace las barras invisibles cuando no está reproduciendo */
 .wave-container.paused .wave-bar {
