@@ -1,16 +1,22 @@
-.text {
-    font-size: 1.8vw;
+main {
+    grid-template-rows: auto 1fr;
 }
 
-.text h3{
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content h4{
     color: var(--quellaveco-azul);
 }
 
-.text ul{
-    margin-top: 50px;
-    list-style-position: inside;
+.content ul{
+    padding-left: 0.8em;
 }
 
-.text li{
+.content li{
+    font-size: var(--font-6);
     color: var(--quellaveco-gris);
 }

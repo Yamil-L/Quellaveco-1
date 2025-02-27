@@ -1,11 +1,17 @@
+main {
+    grid-template-rows: auto 1fr;
+    gap: 0.5em;
+}
+
 .content {
+    overflow-x: auto;
     display: flex;
-    flex-direction: column;
-    padding: 0 1.8em 0 1.8em;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
-    width: 80%;
+    max-width: 80%;
     border-collapse: separate;
     background-image: linear-gradient(to bottom, #FF0000, #351EE0, #347FF6, #1F87C6);
     background-origin: border-box;
@@ -31,6 +37,19 @@ td {
     text-align: left;
 }
 
-.content h2 {
-    color: var(--quellaveco-azul);
+@media only screen and (max-width: 48em) {
+    th {
+        display: none;
+    }
+    td {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 15ch auto;
+        padding: 0.5rem 1rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": " ;
+        font-weight: bold;
+    }
 }

@@ -8,24 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <style>
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        main {
+            display: grid;
+            grid-template-rows: auto 1fr;
         }
     </style>
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
+            <!-- Logo y botón de toggle -->
             <div id="logo-seccion">
                 <a href="/index.html">
-                    <img src="../logo2.png" height="15px" alt="logo">
+                    <img src="../logo2.png" height="15px" alt="logo" />
                 </a>
-                <button onclick="toggleSidebar()" id="toggle-btn">
+                <button id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#000">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -190,12 +194,7 @@
 
         <main>
             <div id="title">
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <h2>Designación de la rosca UNC</h2>
+                <h3>Designación de la rosca UNC</h3>
             </div>
 
             <div class="content">

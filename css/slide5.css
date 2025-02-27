@@ -1,33 +1,17 @@
-.content {
-  height: 100vh;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 5em;
+main {
+  justify-content: flex-start;
 }
 
-.content h2 {
-  margin-top: 50px;
-  font-size: 5vw;
-  font-weight: normal;
-  background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  margin-bottom: 20px;
-  animation: slideIn 1s ease-in-out forwards;
+main h1 {
+  margin: 0.9em;
 }
+
 
 /* SLIDE 1 */
-
 main p {
   position: absolute;
-  z-index: 10;
-  bottom: 30px;
-  right: 50px;
+  bottom: 1.2em;
+  right: 2em;
 
-  font-weight: bolder;
-  font-size: 1.2em;
   color: var(--quellaveco-azul);
 }

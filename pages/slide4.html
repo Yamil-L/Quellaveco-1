@@ -7,12 +7,16 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide4.css">
 
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
             <!-- Logo y botón de toggle -->
@@ -206,12 +210,7 @@
 
         <main>
             <div id="title">
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <h2>Elementos de unión desmontables</h2>
+                <h3>Elementos de Unión Desmontables</h3>
             </div>
 
             <div class="content">
@@ -219,7 +218,7 @@
                     <img src="../assets/slide4/image26.png" alt="Tornillos y tuercas" onclick="openImage(this)">
                 </div>
                 <div class="img-container" id="toggleImage">
-                    <img src="../assets/slide4/informacion.png" alt="Diagrama de tornillo" onclick="toggleExtraImage()">
+                    <img src="../assets/slide4/informacion.gif" alt="click" onclick="toggleExtraImage()">
                 </div>
                 <div class="img-container extra-image">
                     <img src="../assets/slide4//image27.png" alt="Imagen adicional" onclick="openImage(this)">

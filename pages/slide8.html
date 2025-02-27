@@ -7,11 +7,15 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide8.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
             <!-- Logo y botón de toggle -->
@@ -205,20 +209,17 @@
 
         <main>
             <div id="title">
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <h2>Características, tipos y designación de los elementos roscados</h2>
+                <h3>Características, tipos y designación de los elementos roscados</h3>
             </div>
 
             <div class="content">
-                <div class="img-container">
-                    <img src="../images/v2_185.png" alt="Tornillos y tuercas" onclick="openImage(this)">
-                </div>
-                <div class="img-container">
-                    <img src="../images/v2_187.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                <div class="images">
+                    <div class="img-container">
+                        <img src="../images/v2_185.png" alt="Tornillos y tuercas" onclick="openImage(this)">
+                    </div>
+                    <div class="img-container">
+                        <img src="../images/v2_187.png" alt="Diagrama de tornillo" onclick="openImage(this)">
+                    </div>
                 </div>
                 <div class="text">
                     <ul>

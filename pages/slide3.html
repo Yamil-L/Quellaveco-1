@@ -7,11 +7,15 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide3.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
             <!-- Logo y botón de toggle -->
@@ -204,13 +208,13 @@
         </nav>
 
         <main>
-            <div class="right-box">
-                <button class="next-page-btn" onclick="nextPage()">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+            <div class="pulse">
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
             </div>
-            <div class="pulse"></div>
-            <h2>¿Qué elementos de unión, conoces?</h2>
+            <h3>¿Qué elementos de unión conoces?</h3>
         </main>
     </div>
 

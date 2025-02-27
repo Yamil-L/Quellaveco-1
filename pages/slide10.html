@@ -7,11 +7,15 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../assets/slide10/styles.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
             <!-- Logo y botón de toggle -->
@@ -205,39 +209,32 @@
 
         <main>
             <div id="title">
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <h2>Características, tipos y designación de los elementos roscados</h2>
+                <h3>Características, tipos y designación de los elementos roscados</h3>
             </div>
 
             <div class="content">
-                <div class="text">
-                    <ol type="a" class="custom-list"> <!-- Lista ordenada con letras -->
-                        <li>Tornillo autoperforante con cabeza «gota de sebo».</li>
-                        <li>Tornillo autoperforante con cabeza avellanada.</li>
-                        <li>Tornillo autoperforante con cabeza avellanada «gota de sebo».</li>
-                        <li>Tornillo autoperforante con arandela incorporada.</li>
-                        <li>Tornillo de aletas con estrías fresadoras.</li>
-                        <li>Tornillo de aletas sin estrías fresadoras.</li>
-                        <li>Tornillo cabeza avellanadora con aletas de estrías fresadoras.</li>
-                        <li>Tornillo cabeza avellanadora «gota de sebo» con aletas de estrías fresadoras.</li>
-                        <li>Tornillo para chapa con cabeza hexagonal y arandela imperdible</li>
-                        <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
-                        <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
-                        <li>Tornillo para chapa de cabeza cilíndrica y ranura Phillips.</li>
-                        <li>Tornillo para chapa de cabeza «gota de sebo», ranura Phillips y ovalillo.</li>
-                        <li>Tornillo métrico cilíndrico.</li>
-                        <li>Tornillo métrico de cabeza plana con ranura.</li>
-                        <li>Tornillo métrico Allen de cabeza cilíndrica.</li>
-                        <li>Tornillo métrico hexagonal con cabeza roscada</li>
-                        <li>Tornillo métrico hexagonal con vástago.</li>
-                        <li>Tornillo métrico avellanado con ranura.</li>
-                        <li>Tornillo métrico «gota de sebo» con ranura.</li>
-                    </ol>
-                </div>
+                <ol type="a" class="custom-list"> <!-- Lista ordenada con letras -->
+                    <li>Tornillo autoperforante con cabeza «gota de sebo».</li>
+                    <li>Tornillo autoperforante con cabeza avellanada.</li>
+                    <li>Tornillo autoperforante con cabeza avellanada «gota de sebo».</li>
+                    <li>Tornillo autoperforante con arandela incorporada.</li>
+                    <li>Tornillo de aletas con estrías fresadoras.</li>
+                    <li>Tornillo de aletas sin estrías fresadoras.</li>
+                    <li>Tornillo cabeza avellanadora con aletas de estrías fresadoras.</li>
+                    <li>Tornillo cabeza avellanadora «gota de sebo» con aletas de estrías fresadoras.</li>
+                    <li>Tornillo para chapa con cabeza hexagonal y arandela imperdible</li>
+                    <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
+                    <li>Tornillo para chapa con cabeza plana y ala ancha.</li>
+                    <li>Tornillo para chapa de cabeza cilíndrica y ranura Phillips.</li>
+                    <li>Tornillo para chapa de cabeza «gota de sebo», ranura Phillips y ovalillo.</li>
+                    <li>Tornillo métrico cilíndrico.</li>
+                    <li>Tornillo métrico de cabeza plana con ranura.</li>
+                    <li>Tornillo métrico Allen de cabeza cilíndrica.</li>
+                    <li>Tornillo métrico hexagonal con cabeza roscada</li>
+                    <li>Tornillo métrico hexagonal con vástago.</li>
+                    <li>Tornillo métrico avellanado con ranura.</li>
+                    <li>Tornillo métrico «gota de sebo» con ranura.</li>
+                </ol>
                 <div class="img-container">
                     <img src="../assets/slide10/image40.png" alt="Diagrama de tornillo" onclick="openImage(this)">
                 </div>

@@ -7,18 +7,23 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide15.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
+            <!-- Logo y botón de toggle -->
             <div id="logo-seccion">
                 <a href="/index.html">
                     <img src="../logo2.png" height="15px" alt="logo">
                 </a>
-                <button onclick="toggleSidebar()" id="toggle-btn">
+                <button id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#000">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -183,12 +188,7 @@
 
         <main>
             <div id="title">
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <h2>Resistencia del tornillo UNC</h2>
+                <h3>Resistencia del tornillo UNC</h3>
             </div>
 
             <div class="content">
@@ -202,80 +202,80 @@
                       <th>Características del acero</th>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td>¼ a 1½</td>
-                      <td>33</td>
-                      <td>36</td>
-                      <td>60</td>
-                      <td class="left-align">Medio o bajo carbono</td>
+                      <td data-cell="Grado SAE">1</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">33</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">36</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">60</td>
+                      <td class="left-align" data-cell="Características del acero">Medio o bajo carbono</td>
                     </tr>
                     <tr>
-                      <td rowspan="2">2</td>
-                      <td>¼ a ¾</td>
-                      <td>55</td>
-                      <td>57</td>
-                      <td>74</td>
-                      <td rowspan="2" class="left-align">Medio o bajo carbono</td>
+                      <td rowspan="2" data-cell="Grado SAE">2</td>
+                      <td data-cell="Intervalo de tamaños">¼ a ¾</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">55</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">57</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">74</td>
+                      <td rowspan="2" class="left-align" data-cell="Características del acero">Medio o bajo carbono</td>
                     </tr>
                     <tr>
-                      <td>7/8 a 1½</td>
-                      <td>33</td>
-                      <td>36</td>
-                      <td>60</td>
+                      <td data-cell="Intervalo de tamaños">7/8 a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">33</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">36</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">60</td>
                     </tr>
                     <tr>
-                      <td>4</td>
-                      <td>¼ a 1½</td>
-                      <td>65</td>
-                      <td>100</td>
-                      <td>115</td>
-                      <td class="left-align">Medio carbono estirado en frío</td>
+                      <td data-cell="Grado SAE">4</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">65</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">100</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">115</td>
+                      <td class="left-align" data-cell="Características del acero">Medio carbono estirado en frío</td>
                     </tr>
                     <tr>
-                      <td rowspan="2">5</td>
-                      <td>¼ a 1</td>
-                      <td>85</td>
-                      <td>92</td>
-                      <td>120</td>
-                      <td rowspan="2" class="left-align">Medio carbono templado y revenido</td>
+                      <td rowspan="2" data-cell="Grado SAE">5</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">85</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">92</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">120</td>
+                      <td rowspan="2" class="left-align" data-cell="Características del acero">Medio carbono templado y revenido</td>
                     </tr>
                     <tr>
-                      <td>1 1/8 a 1½</td>
-                      <td>74</td>
-                      <td>81</td>
-                      <td>105</td>
+                      <td data-cell="Intervalo de tamaños">1 1/8 a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">74</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">81</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">105</td>
                     </tr>
                     <tr>
-                      <td>5.2</td>
-                      <td>¼ a 1</td>
-                      <td>85</td>
-                      <td>92</td>
-                      <td>120</td>
-                      <td class="left-align">Martensítico de bajo carbono, templado y revenido</td>
+                      <td data-cell="Grado SAE">5.2</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">85</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">92</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">120</td>
+                      <td class="left-align" data-cell="Características del acero">Martensítico de bajo carbono, templado y revenido</td>
                     </tr>
                     <tr>
-                      <td>7</td>
-                      <td>¼ a 1½</td>
-                      <td>105</td>
-                      <td>115</td>
-                      <td>133</td>
-                      <td class="left-align">Aleado de medio carbono, templado y revenido</td>
+                      <td data-cell="Grado SAE">7</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">105</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">115</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">133</td>
+                      <td class="left-align" data-cell="Características del acero">Aleado de medio carbono, templado y revenido</td>
                     </tr>
                     <tr>
-                      <td>8</td>
-                      <td>¼ a 1½</td>
-                      <td>120</td>
-                      <td>130</td>
-                      <td>150</td>
-                      <td class="left-align">Aleado de medio carbono, templado y revenido</td>
+                      <td data-cell="Grado SAE">8</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1½</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">120</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">130</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">150</td>
+                      <td class="left-align" data-cell="Características del acero">Aleado de medio carbono, templado y revenido</td>
                     </tr>
                     <tr>
-                      <td>8.2</td>
-                      <td>¼ a 1</td>
-                      <td>120</td>
-                      <td>130</td>
-                      <td>150</td>
-                      <td class="left-align">Martensítico de bajo carbono, templado y revenido</td>
+                      <td data-cell="Grado SAE">8.2</td>
+                      <td data-cell="Intervalo de tamaños">¼ a 1</td>
+                      <td data-cell="Resistencia límite mínima a la tracción S">120</td>
+                      <td data-cell="Resistencia de fluencia mínima a la tracción S">130</td>
+                      <td data-cell="Resistencia última mínima a la tracción S">150</td>
+                      <td class="left-align" data-cell="Características del acero">Martensítico de bajo carbono, templado y revenido</td>
                     </tr>
                   </table>
             </div>

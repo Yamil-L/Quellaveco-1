@@ -1,14 +1,12 @@
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.8em 1em 1.8em;
+main {
+    grid-template-rows: auto 1fr;
+    gap: 1em;
 }
 
-.text {
-    margin-left: 40px;
-    width: 50%;
-    font-size: 14px;
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 /* Estilo para la lista ordenada */
@@ -16,31 +14,30 @@
     list-style-type: none;
     padding: 0;
     counter-reset: item;
-    font-weight: bold;
 }
 
 /* Aplica estilos a cada elemento de la lista */
 .custom-list li {
+    font-size: var(--font-7);
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.5em;
     color: var(--quellaveco-azul);
-    margin: 0.4em;
 }
 
 /* Crea el círculo alrededor de la letra */
 .custom-list li::before {
-    content: counter(item, lower-alpha);
+    font-size: var(--font-7);
+    content: counter(item, decimal);
     counter-increment: item;
-    width: 25px;
-    height: 25px;
+    width: 1.7em;
+    height: 1.7em;
     border-radius: 50%;
     background-color: #f0f4f8;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
-    font-weight: 500;
+    margin-right: 0.5em;
     flex-shrink: 0;
     font-weight: bold;
     color: var(--quellaveco-azul);
@@ -56,4 +53,10 @@
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 48em) {
+    .content {
+        flex-direction: row;
+    }
 }

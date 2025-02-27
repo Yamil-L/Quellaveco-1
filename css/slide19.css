@@ -1,25 +1,19 @@
 .content {
-    padding: 5em;
-    gap: 20px;    
+    max-width: 70em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
 }
 
-.text-container p{
-    width: 70%;
-    font-size: 1.3vw;
-    color: var(--quellaveco-gris);
-    margin-bottom: 1em;
-}
-
-.text-container h2 {
-    margin-top: 50px;
-    font-size: 2vw;
-    align-items: center;
-    text-transform: capitalize;
+.content h2 {
     background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    margin-bottom: 20px;
     animation: slideIn 1s ease-in-out forwards;
+}
+
+.content p {
+    margin-bottom: 0.5em;
 }

@@ -7,18 +7,23 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide19.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
+            <!-- Logo y botón de toggle -->
             <div id="logo-seccion">
                 <a href="/index.html">
-                    <img src="../logo2.png" height="15px" alt="logo">
+                    <img src="../logo2.png" height="15px" alt="logo" />
                 </a>
-                <button onclick="toggleSidebar()" id="toggle-btn">
+                <button id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#000">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -182,15 +187,6 @@
         </nav>
 
         <main>
-            <div id="title">
-                <div class="left-box"></div>
-                <div class="right-box">
-                    <button class="next-page-btn" onclick="nextPage()">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
             <div class="content">
                 <div class="text-container" id="extra-text">
                     <h2>Fallas de fabricación</h2>
@@ -203,78 +199,6 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Seleccionar todos los contenedores de imágenes
-            const imgContainers = document.querySelectorAll('.img-container');
-
-            // Almacenar las rutas e información de las imágenes originales
-            const originalImages = [];
-
-            imgContainers.forEach((container, index) => {
-                const img = container.querySelector('img');
-                originalImages.push({
-                    src: img.src,
-                    alt: img.alt
-                });
-
-                // Agregar evento click a cada imagen
-                img.addEventListener('click', function () {
-                    // Guardar la información de la imagen clickeada
-                    const clickedSrc = this.src;
-                    const clickedAlt = this.alt;
-
-                    // Obtener la imagen principal (siempre en el primer contenedor)
-                    const mainImg = imgContainers[0].querySelector('img');
-
-                    // Si la imagen clickeada no es la principal, hacer el intercambio
-                    if (this !== mainImg) {
-                        // Guardar los datos de la imagen principal
-                        const mainSrc = mainImg.src;
-                        const mainAlt = mainImg.alt;
-
-                        // Establecer la imagen clickeada como principal
-                        mainImg.src = clickedSrc;
-                        mainImg.alt = clickedAlt;
-
-                        // La imagen principal anterior se mueve a la posición de la clickeada
-                        this.src = mainSrc;
-                        this.alt = mainAlt;
-
-                        // Opcional: Agregar efecto de transición
-                        mainImg.classList.add('image-transition');
-                        this.classList.add('image-transition');
-
-                        setTimeout(() => {
-                            mainImg.classList.remove('image-transition');
-                            this.classList.remove('image-transition');
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Agregar este CSS para la transición (opcional)
-        const style = document.createElement('style');
-        style.textContent = `
-                                .image-transition {
-                                    transition: all 0.3s ease;
-                                }
-                                
-                                .img-container:nth-child(2) img, .img-container:nth-child(3) img {
-                                    opacity: 0.8;
-                                    cursor: pointer;
-                                }
-                                
-                                .img-container:nth-child(2) img:hover, .img-container:nth-child(3) img:hover {
-                                    opacity: 1;
-                                }
-                                
-                                .img-container:nth-child(1) img {
-                                    opacity: 1;
-                                }
-                            `;
-        document.head.appendChild(style);
-
         function nextPage() {
             window.location.href = "slide31.html"; // Reemplaza con la URL de tu página siguiente
         }

@@ -1,25 +1,20 @@
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1.8em 1em 1.8em;
+main {
+    grid-template-rows: auto 1fr;
+    gap: 1em;
 }
 
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    font-size: 14px;
-    gap: 2em;
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: 0.5em;
 }
 
 /* Estilo para la lista ordenada */
 .custom-list {
     list-style-type: none;
-    padding: 0;
     counter-reset: item;
-    font-weight: bold;
+    padding-left: 0.8em;
 }
 
 .custom-list:nth-child(2) {
@@ -28,30 +23,38 @@
 
 /* Aplica estilos a cada elemento de la lista */
 .custom-list li {
+    font-size: var(--font-7);
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.5em;
     color: var(--quellaveco-azul);
-    margin: 0.4em;
 }
 
 /* Crea el círculo alrededor de la letra */
 .custom-list li::before {
+    font-size: var(--font-7);
     content: counter(item, decimal);
     counter-increment: item;
-    width: 25px;
-    height: 25px;
+    width: 1.7em;
+    height: 1.7em;
     border-radius: 50%;
     background-color: #f0f4f8;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
-    font-weight: 500;
+    margin-right: 0.5em;
     flex-shrink: 0;
     font-weight: bold;
     color: var(--quellaveco-azul);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .img-container img {
@@ -63,4 +66,10 @@
     border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 48em) {
+    .content {
+        display: flex;
+    }
 }

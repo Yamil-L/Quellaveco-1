@@ -7,11 +7,15 @@
     <title>Hoja de Trabajo 1.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link rel="stylesheet" href="../css/slide2.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
 <body>
+    <button class="next-page-btn" onclick="nextPage()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
     <div class="container">
         <nav id="sidebar">
             <!-- Logo y botón de toggle -->
@@ -204,43 +208,41 @@
         </nav>
 
         <main>
-            <div class="right-box">
-                <button class="next-page-btn" onclick="nextPage()">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-            <img id="info" src="../assets/slide2/image5.png" alt="img1">
             <div id="title">
-                <h2>Logros de Aprendizaje</h2>
-                <p>Conocer las características, tipos y designación de uniones desmontables (elementos roscados, seguros
-                    elásticos, pasadores y chavetas).</p>
-                <h2>Contenido</h2>
+                <div class="texto">
+                    <h4>Logros de Aprendizaje</h4>
+                    <p>Conocer las características, tipos y designación de uniones desmontables (elementos roscados,
+                        seguros
+                        elásticos, pasadores y chavetas).</p>
+                    <h4 id="titulo">Contenido</h4>
+                </div>
+                <img id="info" src="../assets/slide2/image5.png" alt="img1">
             </div>
             <div class="content">
-                    <div class="image-container">
-                        <img src="../assets/slide2/image1.png" alt="img1">
-                    </div>
-                    <div class="image-container">
-                        <img src="../assets/slide2/image2.png" alt="img2">
-                    </div>
-                    <div class="image-container">
-                        <img src="../assets/slide2/image3.png" alt="img3">
-                    </div>
-                    <div class="image-container">
-                        <img src="../assets/slide2/image4.png" alt="img4">
-                    </div>
-                    
-                    <p>Características, tipos y designación de los elementos roscados</p>
-                    <p>Características, tipos y designación de los seguros elásticos</p>
-                    <p>Características, tipos y designación de los pasadores</p>
-                    <p>Características, tipos y designación de las chavetas</p>
+                <div class="image-container">
+                    <img src="../assets/slide2/image1.png" alt="img1">
+                </div>
+                <div class="image-container">
+                    <img src="../assets/slide2/image2.png" alt="img2">
+                </div>
+                <div class="image-container">
+                    <img src="../assets/slide2/image3.png" alt="img3">
+                </div>
+                <div class="image-container">
+                    <img src="../assets/slide2/image4.png" alt="img4">
+                </div>
+
+                <p>Características, tipos y designación de los elementos roscados</p>
+                <p>Características, tipos y designación de los seguros elásticos</p>
+                <p>Características, tipos y designación de los pasadores</p>
+                <p>Características, tipos y designación de las chavetas</p>
             </div>
 
             <!-- Modal con imagen agrandada -->
-    <div class="overlay" onclick="closeImage()">
-        <span class="close-btn">&times;</span>
-        <img src="" alt="Imagen ampliada">
-    </div>
+            <div class="overlay" onclick="closeImage()">
+                <span class="close-btn">&times;</span>
+                <img src="" alt="Imagen ampliada">
+            </div>
         </main>
     </div>
 

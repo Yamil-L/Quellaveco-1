@@ -1,42 +1,38 @@
 main {
-    display: grid;
     grid-template-rows: auto 1fr;
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
     position: relative;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    place-content: center;
+
+    gap: 0.5em;
     padding: 0.8em;
 }
 
-.img-container {
+
+#toggleImage img {
     position: relative;
-    overflow: hidden;
-}
+    width: 100%;
 
-.img-container img {
-    max-width: 90%;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
+    background: transparent;
+    /* border: 0.05rem solid rgba(178, 178, 178, 0.221); */
+    /* box-shadow: 0.4rem 0.4rem 0.4rem rgba(178, 178, 178, 0.554), -0.8rem -0.8rem 2.4rem white, -0.2rem -0.2rem 0.2rem white; */
 
-.img-container img {
-    max-width: 90%;
-    max-height: 90%;
-    height: auto;
-    width: auto;
-    object-fit: contain;
+    transition: all 120ms ease-out;
 }
 
 /* Imagen extra oculta al inicio */
 .extra-image {
     display: none;
     opacity: 0;
-    transform: translateX(50px);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.extra-image img {
+    width: 50%;
 }
 
 /* Cuando se muestra, aparece en la fila */
@@ -44,31 +40,27 @@ main {
     display: flex;
     flex-direction: column;
     opacity: 1;
-    transform: translateX(0);
-    width: 50%;
-    margin-right: 0.8em;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-.extra-image.show p{
+.extra-image.show p {
     color: var(--quellaveco-azul);
-    font-size: 15px;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 0.5em;
     transition: opacity 0.3s ease-in-out;
 }
 
-#toggleImage img{
-    display: inline-flex;
-    width: 150px;
-    aspect-ratio: 1/1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1.5rem;
-    border: 0.05rem solid rgba(178, 178, 178, 0.221);
-    color: #879fbe;
-    background: transparent;
-    position: relative;
-    box-shadow: 0.4rem 0.4rem 0.4rem rgba(178, 178, 178, 0.554), -0.8rem -0.8rem 2.4rem white, -0.2rem -0.2rem 0.2rem white;
-    transition: all 120msease-out 0s;
-}
 
+@media only screen and (min-width: 64em) {
+
+    .extra-image.show {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .extra-image.show img {
+        width: 20%;
+    }
+}
