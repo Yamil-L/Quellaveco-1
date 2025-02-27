@@ -150,10 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
             initializeMenu(); // Reasignar eventos
 
             // 🔹 Reaplicar estilos por si no se detecta el scroll
-            const sidebar = document.getElementById("sidebar");
-            if (sidebar) {
+            const menu = document.getElementById("menu");
+            if (menu) {
 
-                sidebar.style.overflowY = "auto"; // Reforzar el scroll
+                menu.style.overflowY = "auto"; // Reforzar el scroll
             }
             
         })
