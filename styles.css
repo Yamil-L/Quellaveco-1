@@ -80,6 +80,7 @@ img {
 /* BOTON SIGUIENTE */
 
 .next-page-btn {
+    cursor: pointer;
     position: absolute;
     background: linear-gradient(25deg, var(--quellaveco-azul-claro), var(--quellaveco-azul-oscuro) 60%);
     border: none;
@@ -178,20 +179,6 @@ main p {
 
     margin: 0 0.9em 0.9em 0.9em;
 }
-
-/* #title h2 {
-    margin-top: 50px;
-    font-size: 2.5vw;
-    align-items: center;
-    text-transform: capitalize;
-    background: linear-gradient(to right, #FF0000, #351EE0, #347FF6, #1F87C6);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    margin-bottom: 20px;
-    animation: slideIn 1s ease-in-out forwards;
-} */
 
 /* CONTENT */
 
