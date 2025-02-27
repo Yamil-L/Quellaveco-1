@@ -73,26 +73,33 @@ function closeAllSubmenus() {
 }
 
 function initializeMenu() {
-    // Seleccionar elementos dentro del menú cargado dinámicamente
-    const sidebar = document.getElementById("sidebar");
-    const toggleBtn = document.getElementById("toggle-btn");
-    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    // Esperar a que el menú dinámico se cargue completamente
+    setTimeout(() => {
+        // Seleccionar elementos dentro del menú cargado dinámicamente
+        const sidebar = document.getElementById("sidebar");
+        const toggleBtn = document.getElementById("toggle-btn");
+        const dropdownBtns = document.querySelectorAll(".dropdown-btn");
 
-    // Volver a asignar eventos al botón de toggle del sidebar
-    if (toggleBtn) {
+        // Verificar que los elementos existen antes de asignar eventos
+        if (!sidebar || !toggleBtn || dropdownBtns.length === 0) {
+            console.error("No se encontraron elementos del menú. Verifica el HTML.");
+            return;
+        }
+
+        // Asignar evento para el botón de toggle del sidebar
         toggleBtn.addEventListener("click", function () {
             toggleSidebar(sidebar);
         });
-    }
 
-    // Volver a asignar eventos a los botones de submenú
-    dropdownBtns.forEach(btn => {
-        btn.addEventListener("click", function () {
-            handleSubmenuToggle(this, sidebar);
+        // Asignar eventos a los botones de submenú
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener("click", function () {
+                handleSubmenuToggle(this, sidebar);
+            });
         });
-    });
 
-    console.log("Eventos del menú asignados correctamente.");
+        console.log("Eventos del menú asignados correctamente.");
+    }, 100); // Esperar 100ms para asegurar que el HTML esté cargado
 }
 
 // Función para abrir/cerrar el sidebar
@@ -127,11 +134,11 @@ function handleSubmenuToggle(button, sidebar) {
 
 // Función para cerrar todos los submenús
 function closeAllSubmenus() {
-    const openMenus = document.querySelectorAll('.sub-menu.show');
-    const activeButtons = document.querySelectorAll('.dropdown-btn.active');
+    const openMenus = document.querySelectorAll(".sub-menu.show");
+    const activeButtons = document.querySelectorAll(".dropdown-btn.active");
 
-    openMenus.forEach(menu => menu.classList.remove('show'));
-    activeButtons.forEach(btn => btn.classList.remove('active'));
+    openMenus.forEach(menu => menu.classList.remove("show"));
+    activeButtons.forEach(btn => btn.classList.remove("active"));
 }
 
 // Cargar el menú dinámicamente y volver a asignar los eventos
@@ -144,3 +151,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error al cargar el menú:", error));
 });
+
