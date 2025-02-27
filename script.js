@@ -155,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 menu.style.overflowY = "auto"; // Reforzar el scroll
             }
-            
         })
         .catch(error => console.error("Error al cargar el menú:", error));
 });
