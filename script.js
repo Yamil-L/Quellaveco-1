@@ -149,11 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("menu-container").innerHTML = data;
             initializeMenu(); // Reasignar eventos
 
-            // 🔹 Reaplicar estilos por si no se detecta el scroll
-            const menu = document.getElementById("menu");
-            if (menu) {
-
-                menu.style.overflowY = "auto"; // Reforzar el scroll
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar) {
+                sidebar.style.maxHeight = "100vh"; 
+                sidebar.style.overflowY = "auto"; // Reforzar el scroll
             }
         })
         .catch(error => console.error("Error al cargar el menú:", error));
