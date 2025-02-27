@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../sidebar.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/podcast.css">
     <script type="text/javascript" src="../script.js" defer></script>
 </head>
 
@@ -32,7 +32,7 @@
             </div>
 
             <!-- Menú principal -->
-            <div id="menu-container"></div> 
+            <div id="menu-container"></div>
 
             <!-- Sección de información y logout -->
             <div id="logout-seccion">
@@ -54,17 +54,117 @@
         <main>
             <img src="../logo2.png" alt="logo2">
             <img src="../Protagonistas de desarrollo 1.png" alt="logo3">
-            <audio controls autoplay>
-                <source src="../assets/podcast/Industrial-Detachable-Fasteners.mp3" type="audio/mpeg">
-                Tu navegador no soporta el audio.
-            </audio>
-            
+            <div class="audio-player">
+
+                <div class="wave-container paused">
+                    <!-- Barras de ondas (15 barras) -->
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+
+                <div class="controls">
+                    <button class="play-btn">▶</button>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="time">0:00 / 0:00</div>
+                </div>
+
+                <!-- Audio nativo (oculto) -->
+
+                <audio id="audio-player" controls>
+                    <source src="../assets/podcast/Industrial-Detachable-Fasteners.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el audio.
+                </audio>
+            </div>
+
         </main>
     </div>
 </body>
 <script>
-    function nextPage() {
-        window.location.href = "wordwall.html";
+    const audio = document.getElementById('audio-player');
+    const playBtn = document.querySelector('.play-btn');
+    const progressBar = document.querySelector('.progress-bar');
+    const progressContainer = document.querySelector('.progress-container');
+    const timeDisplay = document.querySelector('.time');
+    const waveContainer = document.querySelector('.wave-container');
+    const waveBars = document.querySelectorAll('.wave-bar');
+
+    // Actualizar el botón si el audio ya está reproduciendo por autoplay
+    if (!audio.paused) {
+        playBtn.textContent = '❚❚';
+        waveContainer.classList.remove('paused');
+        animateWaves();
+    }
+
+    // Función para formatear segundos en formato mm:ss
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // Alternar reproducción/pausa
+    playBtn.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = '❚❚';
+            animateWaves();
+            waveContainer.classList.remove('paused');
+        } else {
+            audio.pause();
+            playBtn.textContent = '▶';
+            waveContainer.classList.add('paused');
+        }
+    });
+
+    // Actualizar barra de progreso
+    audio.addEventListener('timeupdate', function () {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${percent}%`;
+        timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration || 0)}`;
+    });
+
+    // Permitir hacer clic en la barra de progreso para cambiar posición
+    progressContainer.addEventListener('click', function (e) {
+        const clickPosition = e.offsetX / this.offsetWidth;
+        audio.currentTime = clickPosition * audio.duration;
+    });
+
+    // Actualizar al cargar los metadatos del audio
+    audio.addEventListener('loadedmetadata', function () {
+        timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+    });
+
+    // Al terminar el audio
+    audio.addEventListener('ended', function () {
+        playBtn.textContent = '▶';
+        waveContainer.classList.add('paused');
+    });
+
+    // Función para animar las ondas
+    function animateWaves() {
+        if (!audio.paused) {
+            waveBars.forEach(bar => {
+                const height = Math.floor(Math.random() * 40) + 5;
+                bar.style.height = `${height}px`;
+            });
+
+            setTimeout(animateWaves, 200);
+        }
     }
 </script>
 

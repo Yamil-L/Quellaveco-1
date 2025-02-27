@@ -59,13 +59,6 @@ main img:nth-child(2) {
     }
 }
 
-/* AUDIO */
-
-audio {
-    max-width: 50em;
-    background-color: aqua;
-}
-
 /* VIDEO */
 
 .player {
@@ -78,5 +71,138 @@ audio {
 @media only screen and (min-width: 48em) {
     .player {
         width: 60em;
+    }
+}
+
+/* AUDIO */
+.audio-player {
+    width: 50%;
+    height: 50%;
+
+    padding: 0;
+    /* max-width: 500em; */
+    background-color: #FFF;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+/* .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.play-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    min-width: 40px;
+    min-height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.progress-container {
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 3px;
+    width: 0%;
+}
+
+.time {
+    font-size: 12px;
+    color: #777;
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: right;
+}
+
+.wave-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.wave-bar {
+    background-color: #4CAF50;
+    width: 3px;
+    height: 5px;
+    margin: 0 1px;
+    border-radius: 2px;
+    transition: height 0.2s ease;
+} */
+
+/* Hace las barras invisibles cuando no está reproduciendo */
+/* .wave-container.paused .wave-bar {
+    height: 5px !important;
+    background-color: #e0e0e0;
+} */
+
+/* Oculta el reproductor nativo */
+#audio-player {
+    display: none;
+}
+
+/* Media queries para distintos tamaños de pantalla */
+@media (max-width: 400px) {
+    .audio-player {
+        padding: 10px;
+    }
+
+    .play-btn {
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 14px;
+    }
+
+    .time {
+        font-size: 10px;
+        min-width: 60px;
+    }
+
+    .wave-container {
+        height: 40px;
+    }
+
+    .wave-bar {
+        width: 2px;
+        margin: 0 1px;
+    }
+}
+
+@media (max-width: 300px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .play-btn {
+        margin-bottom: 10px;
+        align-self: center;
+    }
+
+    .time {
+        margin-top: 5px;
+        text-align: center;
     }
 }
