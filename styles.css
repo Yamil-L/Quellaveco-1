@@ -233,6 +233,7 @@ main p {
     justify-content: center;
     backdrop-filter: blur(10px);
     transition: opacity 0.3s ease-in-out;
+    z-index: 10;
 }
 
 .overlay img {
@@ -244,6 +245,7 @@ main p {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     animation: zoomIn 0.3s ease-in-out;
+    z-index: 10;
 }
 
 .close-btn {
