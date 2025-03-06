@@ -103,6 +103,7 @@
     align-items: center;
     background-color: var(--quellaveco-celeste);
     border-radius: .5em;
+    width: 2em;
     aspect-ratio: 1/1;
     padding: 0.3em;
 }
@@ -183,10 +184,13 @@
 /* SUBMENUS */
 .sub-menu {
     list-style: none;
-    padding-left: 20px;
     margin: 0;
     display: none;
     overflow: hidden;
+}
+
+.sub-menu .sub-menu .menu-item {
+    padding-left: 0.5em;
 }
 
 .sub-menu.show {
@@ -220,14 +224,20 @@
 /* SECCION LOGO */
 
 #logo-seccion {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-content: center;
     height: 50px;
     padding: 0.8em;
     margin-top: 0.8em;
 
     margin-bottom: 1em;
+}
+
+#logo-seccion a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #sidebar img {
@@ -265,6 +275,8 @@
     position: sticky;
     bottom: 0;
 
+    padding: 0.1em 0.5em;
+
     background-color: var(--quellaveco-azul);
 }
 
@@ -274,9 +286,9 @@
     align-items: center;
     background-color: var(--quellaveco-celeste);
     border-radius: .5em;
+    width: 2em;
     aspect-ratio: 1/1;
-    padding: 0.5em;
-    margin: 0.5em;
+    margin: 0.3em;
 }
 
 #descripcion-unidad {
